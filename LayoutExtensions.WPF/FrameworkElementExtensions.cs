@@ -110,6 +110,13 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TFrameworkElement Margin<TFrameworkElement>([NotNull] this TFrameworkElement @this, double left, double top, double right, double bottom)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.Margin = new Thickness(left, top, right, bottom);
+			return @this;
+		}
+
 		public static TFrameworkElement MarginHorizontal<TFrameworkElement>([NotNull] this TFrameworkElement @this, double horizontal)
 			where TFrameworkElement : FrameworkElement
 		{
