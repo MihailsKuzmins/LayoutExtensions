@@ -9,6 +9,12 @@ namespace LayoutExtensions.WPF
 {
 	public static class FrameworkElementExtensions
 	{
+		public static void Assign<TFrameworkElement>([NotNull] this TFrameworkElement @this, out TFrameworkElement frameworkElement)
+					where TFrameworkElement : FrameworkElement
+		{
+			frameworkElement = @this;
+		}
+
 		public static TFrameworkElement Width<TFrameworkElement>([NotNull] this TFrameworkElement @this, double width)
 			where TFrameworkElement : FrameworkElement
 		{
