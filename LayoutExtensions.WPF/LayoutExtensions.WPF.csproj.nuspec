@@ -7,7 +7,7 @@
     <owners>Mihails Kuzmins</owners>
     <licenseUrl>https://github.com/MihailsKuzmins/LayoutExtensions/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/MihailsKuzmins/LayoutExtensions</projectUrl>
-    <iconUrl>https://github.com/MihailsKuzmins/LayoutExtensions/Ico.png</iconUrl>
+    <iconUrl>https://github.com/MihailsKuzmins/LayoutExtensions/blob/master/Ico.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Layout extensions for WPF controls to create them in c#</description>
     <releaseNotes>Initial upload</releaseNotes>
