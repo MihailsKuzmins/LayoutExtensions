@@ -8,11 +8,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LayoutExtensions.WPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Layout extensions for WPF in C#")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Mihails Kuzmins")]
 [assembly: AssemblyProduct("LayoutExtensions.WPF")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © MihailsKuzmins 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
