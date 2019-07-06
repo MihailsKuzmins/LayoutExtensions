@@ -10,7 +10,7 @@ namespace LayoutExtensions.WPF
 	public static class FrameworkElementExtensions
 	{
 		public static void Assign<TFrameworkElement>([NotNull] this TFrameworkElement @this, out TFrameworkElement frameworkElement)
-					where TFrameworkElement : FrameworkElement
+			where TFrameworkElement : FrameworkElement
 		{
 			frameworkElement = @this;
 		}
@@ -303,6 +303,31 @@ namespace LayoutExtensions.WPF
 			where TFrameworkElement : FrameworkElement
 		{
 			return @this.HorizontalAlignment(H.Right);
+		}
+
+		public static TFrameworkElement AddToPanel<TFrameworkElement>([NotNull] this TFrameworkElement @this, Panel panel)
+			where TFrameworkElement : FrameworkElement
+		{
+			panel.Children.Add(@this);
+			return @this;
+		}
+
+		public static TFrameworkElement Row<TFrameworkElement>([NotNull] this TFrameworkElement @this, int row, int rowSpan = 1)
+			where TFrameworkElement : FrameworkElement
+		{
+			Grid.SetRow(@this, row);
+			Grid.SetRowSpan(@this, rowSpan);
+
+			return @this;
+		}
+
+		public static TFrameworkElement Col<TFrameworkElement>([NotNull] this TFrameworkElement @this, int column, int colSpan = 1)
+			where TFrameworkElement : FrameworkElement
+		{
+			Grid.SetColumn(@this, column);
+			Grid.SetColumnSpan(@this, colSpan);
+
+			return @this;
 		}
 	}
 }
