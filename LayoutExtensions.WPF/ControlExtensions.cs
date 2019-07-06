@@ -3,6 +3,8 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using H = System.Windows.HorizontalAlignment;
+using V = System.Windows.VerticalAlignment;
 
 namespace LayoutExtensions.WPF
 {
@@ -331,6 +333,70 @@ namespace LayoutExtensions.WPF
 		{
 			@this.HorizontalContentAlignment = horizontalAlignment;
 			return @this;
+		}
+
+		public static TControl ContentTop<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.VerticalContentAlignment(V.Top);
+		}
+
+		public static TControl ContentCenterV<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.VerticalContentAlignment(V.Center);
+		}
+
+		public static TControl ContentCenterH<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.HorizontalContentAlignment(H.Center);
+		}
+
+		public static TControl ContentCenter<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this
+				.ContentCenterH()
+				.ContentCenterV();
+		}
+
+		public static TControl ContentBotton<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.VerticalContentAlignment(V.Bottom);
+		}
+
+		public static TControl ContentStretchV<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.VerticalContentAlignment(V.Stretch);
+		}
+
+		public static TControl ContentStretchH<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.HorizontalContentAlignment(H.Stretch);
+		}
+
+		public static TControl ContentStretch<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this
+				.ContentStretchH()
+				.ContentStretchV();
+		}
+
+		public static TControl ContentLeft<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.HorizontalContentAlignment(H.Left);
+		}
+
+		public static TControl ContentRight<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			return @this.HorizontalContentAlignment(H.Right);
 		}
 	}
 }

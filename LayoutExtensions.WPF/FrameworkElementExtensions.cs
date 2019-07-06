@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using H = System.Windows.HorizontalAlignment;
+using V = System.Windows.VerticalAlignment;
 
 namespace LayoutExtensions.WPF
 {
@@ -231,6 +233,70 @@ namespace LayoutExtensions.WPF
 		{
 			@this.FocusVisualStyle = focusVisualStyle;
 			return @this;
+		}
+
+		public static TFrameworkElement Top<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.VerticalAlignment(V.Top);
+		}
+
+		public static TFrameworkElement CenterV<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.VerticalAlignment(V.Center);
+		}
+
+		public static TFrameworkElement CenterH<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.HorizontalAlignment(H.Center);
+		}
+
+		public static TFrameworkElement Center<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this
+				.CenterH()
+				.CenterV();
+		}
+
+		public static TFrameworkElement Botton<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.VerticalAlignment(V.Bottom);
+		}
+
+		public static TFrameworkElement StretchV<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.VerticalAlignment(V.Stretch);
+		}
+
+		public static TFrameworkElement StretchH<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.HorizontalAlignment(H.Stretch);
+		}
+
+		public static TFrameworkElement Stretch<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this
+				.StretchH()
+				.StretchV();
+		}
+
+		public static TFrameworkElement Left<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.HorizontalAlignment(H.Left);
+		}
+
+		public static TFrameworkElement Right<TFrameworkElement>([NotNull] this TFrameworkElement @this)
+			where TFrameworkElement : FrameworkElement
+		{
+			return @this.HorizontalAlignment(H.Right);
 		}
 	}
 }
