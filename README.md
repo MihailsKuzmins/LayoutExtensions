@@ -1,5 +1,7 @@
 # LayoutExtensions
 
+[![NuGet Stats](https://img.shields.io/nuget/v/LayoutExtensions.WPF.svg)](https://www.nuget.org/packages/LayoutExtensions.WPF/)
+
 The library provides extension methods for assigning properties to FrameworkElements and Control in a fluent way. Using the library involves creating the UI in C#, non in XAML files. Currently there are only WPF extension methods.
 Example:
 
@@ -74,5 +76,3 @@ Available extensions:
 4) ContextMenu - ApplyTo, MenuItem;
 
 5) Grid - Rows, Cols.
-
-NuGet package: https://www.nuget.org/packages/LayoutExtensions.WPF/
