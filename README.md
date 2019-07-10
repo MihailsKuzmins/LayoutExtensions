@@ -11,27 +11,27 @@ The library provides extension methods for assigning properties to FrameworkElem
 		public MainWindow()
 		{
 			new Grid()
-				.Rows(CreateRowDefinitions())
-				.Cols(CreateColumnDefinitions())
-				.Assign(out var contentGrid);
+			    .Rows(CreateRowDefinitions())
+			    .Cols(CreateColumnDefinitions())
+			    .Assign(out var contentGrid);
 
 			new Label()
-				.Col(0, 2)
-				.FontSize(25)
-				.AddToPanel(contentGrid)
-				.Assign(out _titleLabel);
+			    .Col(0, 2)
+			    .FontSize(25)
+			    .AddToPanel(contentGrid)
+			    .Assign(out _titleLabel);
 
 			new ItemsControl { ItemTemplate = CreateItemTemplate() }
-				.Row(1, 2)
-				.AddToPanel(contentGrid)
-				.Assign(out _itemsControl);
+			    .Row(1, 2)
+			    .AddToPanel(contentGrid)
+			    .Assign(out _itemsControl);
 
 			new Button()
-				.Row(1, 2)
-				.Col(1)
-				.Content("Navigate back")
-				.AddToPanel(contentGrid)
-				.Assign(out _backButton);
+			    .Row(1, 2)
+			    .Col(1)
+			    .Content("Navigate back")
+			    .AddToPanel(contentGrid)
+			    .Assign(out _backButton);
 
 			Content = contentGrid;
 		}
