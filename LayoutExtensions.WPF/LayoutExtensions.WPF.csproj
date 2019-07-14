@@ -62,6 +62,7 @@
     <Compile Include="Extensions\FontSizesExtensions.cs" />
     <Compile Include="FrameworkElementExtensions.cs" />
     <Compile Include="GridExtensions.cs" />
+    <Compile Include="ItemsControlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
