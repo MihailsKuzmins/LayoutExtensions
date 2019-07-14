@@ -9,12 +9,6 @@ namespace LayoutExtensions.WPF
 {
 	public static class FrameworkElementExtensions
 	{
-		public static void Assign<TFrameworkElement>([NotNull] this TFrameworkElement @this, out TFrameworkElement frameworkElement)
-			where TFrameworkElement : FrameworkElement
-		{
-			frameworkElement = @this;
-		}
-
 		public static TFrameworkElement Width<TFrameworkElement>([NotNull] this TFrameworkElement @this, double width)
 			where TFrameworkElement : FrameworkElement
 		{
@@ -186,7 +180,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TFrameworkElement VerticalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, VerticalAlignment verticalAlignment)
+		public static TFrameworkElement VerticalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, V verticalAlignment)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.VerticalAlignment = verticalAlignment;
@@ -200,7 +194,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TFrameworkElement HorizontalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, HorizontalAlignment horizontalAlignment)
+		public static TFrameworkElement HorizontalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, H horizontalAlignment)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.HorizontalAlignment = horizontalAlignment;
