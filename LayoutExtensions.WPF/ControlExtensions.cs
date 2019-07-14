@@ -197,13 +197,6 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl VerticalContentAlignment<TControl>([NotNull] this TControl @this, VerticalAlignment verticalAlignment)
-			where TControl : Control
-		{
-			@this.VerticalContentAlignment = verticalAlignment;
-			return @this;
-		}
-
 		public static TControl TabIndex<TControl>([NotNull] this TControl @this, int tabIndex)
 			where TControl : Control
 		{
@@ -328,13 +321,6 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl HorizontalContentAlignment<TControl>([NotNull] this TControl @this, HorizontalAlignment horizontalAlignment)
-			where TControl : Control
-		{
-			@this.HorizontalContentAlignment = horizontalAlignment;
-			return @this;
-		}
-
 		public static TControl ContentTop<TControl>([NotNull] this TControl @this)
 			where TControl : Control
 		{
@@ -397,6 +383,20 @@ namespace LayoutExtensions.WPF
 			where TControl : Control
 		{
 			return @this.HorizontalContentAlignment(H.Right);
+		}
+
+		private static TControl HorizontalContentAlignment<TControl>([NotNull] this TControl @this, HorizontalAlignment horizontalAlignment)
+			where TControl : Control
+		{
+			@this.HorizontalContentAlignment = horizontalAlignment;
+			return @this;
+		}
+
+		private static TControl VerticalContentAlignment<TControl>([NotNull] this TControl @this, V verticalAlignment)
+			where TControl : Control
+		{
+			@this.VerticalContentAlignment = verticalAlignment;
+			return @this;
 		}
 	}
 }

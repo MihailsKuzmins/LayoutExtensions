@@ -180,24 +180,10 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TFrameworkElement VerticalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, V verticalAlignment)
-			where TFrameworkElement : FrameworkElement
-		{
-			@this.VerticalAlignment = verticalAlignment;
-			return @this;
-		}
-
 		public static TFrameworkElement OverridesDefaultStyle<TFrameworkElement>([NotNull] this TFrameworkElement @this, bool overridesDefaultStyle)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.OverridesDefaultStyle = overridesDefaultStyle;
-			return @this;
-		}
-
-		public static TFrameworkElement HorizontalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, H horizontalAlignment)
-			where TFrameworkElement : FrameworkElement
-		{
-			@this.HorizontalAlignment = horizontalAlignment;
 			return @this;
 		}
 
@@ -321,6 +307,20 @@ namespace LayoutExtensions.WPF
 			Grid.SetColumn(@this, column);
 			Grid.SetColumnSpan(@this, colSpan);
 
+			return @this;
+		}
+
+		private static TFrameworkElement HorizontalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, H horizontalAlignment)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.HorizontalAlignment = horizontalAlignment;
+			return @this;
+		}
+
+		private static TFrameworkElement VerticalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, V verticalAlignment)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.VerticalAlignment = verticalAlignment;
 			return @this;
 		}
 	}
