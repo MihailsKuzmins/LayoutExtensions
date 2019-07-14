@@ -67,12 +67,24 @@ Example:
 	}
 
 Available extensions:
-1) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, VerticalAlignment, OverridesDefaultStyle, HorizontalAlignment, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel, Row, Col;
+1) DependencyObject - Assign;
 
-2) Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, VerticalContentAlignment, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, BorderBrush, HorizontalContentAlignment, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
+2) UiElement - Visible, Hidden, Collapsed;
 
-3) ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
+3) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel, Row, Col;
 
-4) ContextMenu - ApplyTo, MenuItem;
+4) Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
 
-5) Grid - Rows, Cols.
+5) ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
+
+6) ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
+
+7) StackPanel - Horizontal, Vertical;
+
+8) Grid - Rows, Cols;
+
+9) ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
+
+10) ContextMenu - ApplyTo, MenuItem;
+
+11) CollectionViewSource - GroupDescription.
