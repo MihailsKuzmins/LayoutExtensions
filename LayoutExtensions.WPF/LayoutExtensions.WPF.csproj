@@ -52,10 +52,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\BorderExtensions.cs" />
     <Compile Include="src\CollectionViewSourceExtensions.cs" />
     <Compile Include="src\ContentControlExtensions.cs" />
     <Compile Include="src\ContextMenuExtensions.cs" />
     <Compile Include="src\ControlExtensions.cs" />
+    <Compile Include="src\DecoratorExtensions.cs" />
     <Compile Include="src\DependencyObjectExtensions.cs" />
     <Compile Include="Enums\FontSizes.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
