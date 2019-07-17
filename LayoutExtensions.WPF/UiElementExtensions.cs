@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using V = System.Windows.Visibility;
 
 namespace LayoutExtensions.WPF
@@ -36,6 +37,18 @@ namespace LayoutExtensions.WPF
 			where TUiElement : UIElement
 		{
 			Grid.SetRowSpan(@this, rowSpan);
+			return @this;
+		}
+
+		public static TUiElement MouseBinding<TUiElement>([NotNull] this TUiElement @this, MouseAction mouseAction, out MouseBinding mouseBinding)
+			where TUiElement : UIElement
+		{
+			mouseBinding = new MouseBinding
+			{
+				MouseAction = mouseAction
+			};
+
+			@this.InputBindings.Add(mouseBinding);
 			return @this;
 		}
 
