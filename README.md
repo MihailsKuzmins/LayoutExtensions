@@ -87,6 +87,10 @@ Available extensions:
 
 10) ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
 
-11) ContextMenu - ApplyTo, MenuItem;
+11) Decorator - Child;
 
-12) CollectionViewSource - GroupDescription.
+12) Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
+
+13) ContextMenu - ApplyTo, MenuItem;
+
+14) CollectionViewSource - GroupDescription.
