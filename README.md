@@ -24,8 +24,9 @@ Example:
 			    .AddToPanel(contentGrid)
 			    .Assign(out _titleLabel);
 
-			new ItemsControl { ItemTemplate = CreateItemTemplate() }
+			new ItemsControl()
 			    .Row(1, 2)
+			    .ItemTemplate(CreateItemTemplate())
 			    .AddToPanel(contentGrid)
 			    .Assign(out _itemsControl);
 
