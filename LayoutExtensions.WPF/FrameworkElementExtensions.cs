@@ -292,24 +292,6 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TFrameworkElement Row<TFrameworkElement>([NotNull] this TFrameworkElement @this, int row, int rowSpan = 1)
-			where TFrameworkElement : FrameworkElement
-		{
-			Grid.SetRow(@this, row);
-			Grid.SetRowSpan(@this, rowSpan);
-
-			return @this;
-		}
-
-		public static TFrameworkElement Col<TFrameworkElement>([NotNull] this TFrameworkElement @this, int column, int colSpan = 1)
-			where TFrameworkElement : FrameworkElement
-		{
-			Grid.SetColumn(@this, column);
-			Grid.SetColumnSpan(@this, colSpan);
-
-			return @this;
-		}
-
 		private static TFrameworkElement HorizontalAlignment<TFrameworkElement>([NotNull] this TFrameworkElement @this, H horizontalAlignment)
 			where TFrameworkElement : FrameworkElement
 		{
