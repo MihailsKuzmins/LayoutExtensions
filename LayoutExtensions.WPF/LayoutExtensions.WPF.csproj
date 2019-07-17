@@ -52,17 +52,17 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CollectionViewSourceExtensions.cs" />
-    <Compile Include="ContentControlExtensions.cs" />
-    <Compile Include="ContextMenuExtensions.cs" />
-    <Compile Include="ControlExtensions.cs" />
-    <Compile Include="DependencyObjectExtensions.cs" />
+    <Compile Include="src\CollectionViewSourceExtensions.cs" />
+    <Compile Include="src\ContentControlExtensions.cs" />
+    <Compile Include="src\ContextMenuExtensions.cs" />
+    <Compile Include="src\ControlExtensions.cs" />
+    <Compile Include="src\DependencyObjectExtensions.cs" />
     <Compile Include="Enums\FontSizes.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\FontSizesExtensions.cs" />
-    <Compile Include="FrameworkElementExtensions.cs" />
-    <Compile Include="GridExtensions.cs" />
-    <Compile Include="ItemsControlExtensions.cs" />
+    <Compile Include="src\FrameworkElementExtensions.cs" />
+    <Compile Include="src\GridExtensions.cs" />
+    <Compile Include="src\ItemsControlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,10 +76,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ScrollViewerExtensions.cs" />
-    <Compile Include="StackPanelExtensions.cs" />
-    <Compile Include="StyleExtensions.cs" />
-    <Compile Include="UiElementExtensions.cs" />
+    <Compile Include="src\ScrollViewerExtensions.cs" />
+    <Compile Include="src\StackPanelExtensions.cs" />
+    <Compile Include="src\StyleExtensions.cs" />
+    <Compile Include="src\UiElementExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
