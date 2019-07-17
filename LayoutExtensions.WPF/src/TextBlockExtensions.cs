@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace LayoutExtensions.WPF.src
+namespace LayoutExtensions.WPF
 {
 	public static class TextBlockExtensions
 	{

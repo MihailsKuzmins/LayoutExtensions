@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace LayoutExtensions.WPF.src
+namespace LayoutExtensions.WPF
 {
 	public static class DecoratorExtensions
 	{
