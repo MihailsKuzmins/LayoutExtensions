@@ -79,6 +79,7 @@
     <Compile Include="src\ScrollViewerExtensions.cs" />
     <Compile Include="src\StackPanelExtensions.cs" />
     <Compile Include="src\StyleExtensions.cs" />
+    <Compile Include="src\TextBlockExtensions.cs" />
     <Compile Include="src\UiElementExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
