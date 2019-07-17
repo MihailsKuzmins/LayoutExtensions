@@ -69,9 +69,9 @@ Example:
 Available extensions:
 1) DependencyObject - Assign;
 
-2) UiElement - Visible, Hidden, Collapsed;
+2) UiElement - Row, Col, ColSpan, RowSpan, Visible, Hidden, Collapsed;
 
-3) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel, Row, Col;
+3) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
 
 4) Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
 
