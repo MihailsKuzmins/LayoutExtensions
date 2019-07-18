@@ -82,7 +82,7 @@ Available extensions:
  
  - TextBoxBase - ReadOnly;
 
- - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin.
+ - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin, KeyBinding.
 
 
  - Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
