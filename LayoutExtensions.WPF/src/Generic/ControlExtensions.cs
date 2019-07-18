@@ -52,10 +52,10 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl FontFamily<TControl>([NotNull] this TControl @this, FontSizes fontSize)
+		public static TControl FontFamily<TControl>([NotNull] this TControl @this, Fonts font)
 			where TControl : Control
 		{
-			@this.FontFamily = new FontFamily(fontSize.ToFontSizeString());
+			@this.FontFamily = new FontFamily(font.ToFontString());
 			return @this;
 		}
 

@@ -4,146 +4,146 @@ namespace LayoutExtensions.WPF
 {
 	internal static class FontSizesExtensions
 	{
-		internal static string ToFontSizeString(this FontSizes fontSize)
+		internal static string ToFontString(this Fonts font)
 		{
-			switch (fontSize)
+			switch (font)
 			{
-				case FontSizes.Aharoni:
+				case Fonts.Aharoni:
 					return "Aharoni";
-				case FontSizes.Andalus:
+				case Fonts.Andalus:
 					return "Andalus";
-				case FontSizes.AngsanaUpc:
+				case Fonts.AngsanaUpc:
 					return "AngsanaUPC";
-				case FontSizes.AngsanaNew:
+				case Fonts.AngsanaNew:
 					return "Angsana New";
-				case FontSizes.ArabicTransparent:
+				case Fonts.ArabicTransparent:
 					return "Arabic Transparent";
-				case FontSizes.Arial:
+				case Fonts.Arial:
 					return "Arial";
-				case FontSizes.ArialBlack:
+				case Fonts.ArialBlack:
 					return "Arial Black";
-				case FontSizes.Batang:
+				case Fonts.Batang:
 					return "Batang";
-				case FontSizes.BrowalliaUpc:
+				case Fonts.BrowalliaUpc:
 					return "BrowalliaUPC";
-				case FontSizes.BrowalliaNew:
+				case Fonts.BrowalliaNew:
 					return "Browallia New";
-				case FontSizes.ComicSansMs:
+				case Fonts.ComicSansMs:
 					return "Comic Sans MS";
-				case FontSizes.CordiaUpc:
+				case Fonts.CordiaUpc:
 					return "CordiaUPC";
-				case FontSizes.CordiaNew:
+				case Fonts.CordiaNew:
 					return "Cordia New";
-				case FontSizes.CourierNew:
+				case Fonts.CourierNew:
 					return "Courier New";
-				case FontSizes.David:
+				case Fonts.David:
 					return "David";
-				case FontSizes.DfKaiSb:
+				case Fonts.DfKaiSb:
 					return "DFKai-SB";
-				case FontSizes.DilleniaUpc:
+				case Fonts.DilleniaUpc:
 					return "DilleniaUPC";
-				case FontSizes.EstrangeloEdessa:
+				case Fonts.EstrangeloEdessa:
 					return "Estrangelo Edessa";
-				case FontSizes.EucrosiaUpc:
+				case Fonts.EucrosiaUpc:
 					return "EucrosiaUPC";
-				case FontSizes.FixedMiriamTransparent:
+				case Fonts.FixedMiriamTransparent:
 					return "Fixed Miriam Transparent";
-				case FontSizes.FranklinGothic:
+				case Fonts.FranklinGothic:
 					return "Franklin Gothic";
-				case FontSizes.FrankRuehl:
+				case Fonts.FrankRuehl:
 					return "FrankRuehl";
-				case FontSizes.FreesiaUpc:
+				case Fonts.FreesiaUpc:
 					return "FreesiaUPC";
-				case FontSizes.Gautami:
+				case Fonts.Gautami:
 					return "Gautami";
-				case FontSizes.Georgia:
+				case Fonts.Georgia:
 					return "Georgia";
-				case FontSizes.Gulim:
+				case Fonts.Gulim:
 					return "Gulim";
-				case FontSizes.Impact:
+				case Fonts.Impact:
 					return "Impact";
-				case FontSizes.IrisUpc:
+				case Fonts.IrisUpc:
 					return "IrisUPC";
-				case FontSizes.JasmineUpc:
+				case Fonts.JasmineUpc:
 					return "JasmineUPC";
-				case FontSizes.KaiTi:
+				case Fonts.KaiTi:
 					return "KaiTi";
-				case FontSizes.Kartika:
+				case Fonts.Kartika:
 					return "Kartika";
-				case FontSizes.KodchiangUpc:
+				case Fonts.KodchiangUpc:
 					return "KodchiangUPC";
-				case FontSizes.Latha:
+				case Fonts.Latha:
 					return "Latha";
-				case FontSizes.LevenimMt:
+				case Fonts.LevenimMt:
 					return "Levenim MT";
-				case FontSizes.LilyUpc:
+				case Fonts.LilyUpc:
 					return "LilyUPC";
-				case FontSizes.LucidaConsole:
+				case Fonts.LucidaConsole:
 					return "Lucida Console";
-				case FontSizes.LucidaSans:
+				case Fonts.LucidaSans:
 					return "Lucida Sans";
-				case FontSizes.LucidaSansUnicode:
+				case Fonts.LucidaSansUnicode:
 					return "Lucida Sans Unicode";
-				case FontSizes.Mangal:
+				case Fonts.Mangal:
 					return "Mangal";
-				case FontSizes.Marlett:
+				case Fonts.Marlett:
 					return "Marlett";
-				case FontSizes.MicrosoftSansSerif:
+				case Fonts.MicrosoftSansSerif:
 					return "Microsoft Sans Serif";
-				case FontSizes.PMingLiU:
+				case Fonts.PMingLiU:
 					return "PMingLiU";
-				case FontSizes.Miriam:
+				case Fonts.Miriam:
 					return "Miriam";
-				case FontSizes.MiriamFixed:
+				case Fonts.MiriamFixed:
 					return "Miriam Fixed";
-				case FontSizes.MsGothic:
+				case Fonts.MsGothic:
 					return "MS Gothic";
-				case FontSizes.MsMincho:
+				case Fonts.MsMincho:
 					return "MS Mincho";
-				case FontSizes.MvBoli:
+				case Fonts.MvBoli:
 					return "MV Boli";
-				case FontSizes.Narkisim:
+				case Fonts.Narkisim:
 					return "Narkisim";
-				case FontSizes.PalatinoLinotype:
+				case Fonts.PalatinoLinotype:
 					return "Palatino Linotype";
-				case FontSizes.PMingLiUExtB:
+				case Fonts.PMingLiUExtB:
 					return "PMingLiU-ExtB";
-				case FontSizes.Raavi:
+				case Fonts.Raavi:
 					return "Raavi";
-				case FontSizes.Rod:
+				case Fonts.Rod:
 					return "Rod";
-				case FontSizes.Shruti:
+				case Fonts.Shruti:
 					return "Shruti";
-				case FontSizes.SimHei:
+				case Fonts.SimHei:
 					return "SimHei";
-				case FontSizes.SimplifiedArabicFixed:
+				case Fonts.SimplifiedArabicFixed:
 					return "Simplified Arabic Fixed";
-				case FontSizes.SimSunExtB:
+				case Fonts.SimSunExtB:
 					return "SimSun-ExtB";
-				case FontSizes.Sylfaen:
+				case Fonts.Sylfaen:
 					return "Sylfaen";
-				case FontSizes.Symbol:
+				case Fonts.Symbol:
 					return "Symbol";
-				case FontSizes.Tahoma:
+				case Fonts.Tahoma:
 					return "Tahoma";
-				case FontSizes.TimesNewRoman:
+				case Fonts.TimesNewRoman:
 					return "Times New Roman";
-				case FontSizes.TraditionalArabic:
+				case Fonts.TraditionalArabic:
 					return "Traditional Arabic";
-				case FontSizes.TrebuchetMs:
+				case Fonts.TrebuchetMs:
 					return "Trebuchet MS";
-				case FontSizes.Tunga:
+				case Fonts.Tunga:
 					return "Tunga";
-				case FontSizes.Verdana:
+				case Fonts.Verdana:
 					return "Verdana";
-				case FontSizes.Vrinda:
+				case Fonts.Vrinda:
 					return "Vrinda";
-				case FontSizes.Webdings:
+				case Fonts.Webdings:
 					return "Webdings";
-				case FontSizes.Wingdings:
+				case Fonts.Wingdings:
 					return "Wingdings";
 				default:
-					throw new ArgumentOutOfRangeException(nameof(fontSize));
+					throw new ArgumentOutOfRangeException(nameof(font));
 			}
 		}
 	}
