@@ -94,4 +94,8 @@ Available extensions:
 
 13) ContextMenu - ApplyTo, MenuItem;
 
-14) CollectionViewSource - GroupDescription.
+14) CollectionViewSource - GroupDescription;
+
+15) Image - Source;
+
+16) String - ToImageSource.
