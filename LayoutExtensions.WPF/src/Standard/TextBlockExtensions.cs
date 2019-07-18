@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using System;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -33,6 +34,30 @@ namespace LayoutExtensions.WPF
 		public static TextBlock FontSize([NotNull] this TextBlock @this, double fontSize)
 		{
 			@this.FontSize = fontSize;
+			return @this;
+		}
+
+		public static TextBlock FontFamily([NotNull] this TextBlock @this, FontFamily fontFamily)
+		{
+			@this.FontFamily = fontFamily;
+			return @this;
+		}
+
+		public static TextBlock FontFamily([NotNull] this TextBlock @this, string fontFamily)
+		{
+			@this.FontFamily = new FontFamily(fontFamily);
+			return @this;
+		}
+
+		public static TextBlock FontFamily([NotNull] this TextBlock @this, Uri uri, string fontFamily)
+		{
+			@this.FontFamily = new FontFamily(uri, fontFamily);
+			return @this;
+		}
+
+		public static TextBlock FontFamily([NotNull] this TextBlock @this, Fonts font)
+		{
+			@this.FontFamily = new FontFamily(font.ToFontString());
 			return @this;
 		}
 	}
