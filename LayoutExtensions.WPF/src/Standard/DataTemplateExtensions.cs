@@ -3,7 +3,7 @@ using System;
 using System.Windows;
 using System.Windows.Data;
 
-namespace LayoutExtensions.WPF.src.Standard
+namespace LayoutExtensions.WPF
 {
 	public static class DataTemplateExtensions
 	{
