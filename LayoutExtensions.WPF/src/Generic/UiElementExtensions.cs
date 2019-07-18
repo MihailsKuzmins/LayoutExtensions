@@ -70,6 +70,28 @@ namespace LayoutExtensions.WPF
 			return @this.Visibility(V.Collapsed);
 		}
 
+		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, Point point)
+			where TUiElement : UIElement
+		{
+			@this.RenderTransformOrigin = point;
+			return @this;
+
+		}
+
+		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, double uniform)
+			where TUiElement : UIElement
+		{
+			@this.RenderTransformOrigin = new Point(uniform, uniform);
+			return @this;
+		}
+
+		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, double x, double y)
+			where TUiElement : UIElement
+		{
+			@this.RenderTransformOrigin = new Point(x, y);
+			return @this;
+		}
+
 		private static TUiElement Visibility<TUiElement>([NotNull] this TUiElement @this, V visibility)
 			where TUiElement : UIElement
 		{
