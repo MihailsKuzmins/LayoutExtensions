@@ -53,18 +53,10 @@ Example:
 			yield return new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
 		}
 
-		private static DataTemplate CreateItemTemplate()
-		{
-			var viewType = typeof(SomeExampleView);
-
-			var templateFactory = new FrameworkElementFactory(viewType);
-			templateFactory.SetBinding(DataContextProperty, new Binding("."));
-
-			return new DataTemplate(viewType)
-			{
-				VisualTree = templateFactory
-			};
-		}
+		private static DataTemplate CreateItemTemplate() =>
+			new DataTemplate()
+			    .From(typeof(SomeExampleView))
+			    .DataType(typeof(SomeExampleViewModel));
 	}
 
 Available extensions:
