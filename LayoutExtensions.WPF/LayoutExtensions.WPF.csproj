@@ -63,6 +63,7 @@
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\FontSizesExtensions.cs" />
     <Compile Include="src\Generic\FrameworkElementExtensions.cs" />
+    <Compile Include="src\Standard\DataTemplateExtensions.cs" />
     <Compile Include="src\Standard\GridExtensions.cs" />
     <Compile Include="src\Standard\ImageExtensions.cs" />
     <Compile Include="src\Standard\ItemsControlExtensions.cs" />
