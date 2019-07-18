@@ -78,24 +78,26 @@ Available extensions:
 
 5) ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
 
-6) TextBlock - Foreground, FontSize;
+6) TextBlock - Foreground, FontSize, FontFamily;
 
 7) ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
 
-8) StackPanel - Horizontal, Vertical;
+8) DataTemplate - From, DataType;
 
-9) Grid - Rows, Cols;
+9) StackPanel - Horizontal, Vertical;
 
-10) ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
+10) Grid - Rows, Cols;
 
-11) Decorator - Child;
+11) ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
 
-12) Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
+12) Decorator - Child;
 
-13) ContextMenu - ApplyTo, MenuItem;
+13) Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
 
-14) CollectionViewSource - GroupDescription;
+14) ContextMenu - ApplyTo, MenuItem;
 
-15) Image - Source;
+15) CollectionViewSource - GroupDescription;
 
-16) String - ToImageSource.
+16) Image - Source;
+
+17) String - ToImageSource.
