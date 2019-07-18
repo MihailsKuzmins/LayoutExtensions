@@ -92,6 +92,18 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, Key key, out KeyBinding keyBinding)
+			where TUiElement : UIElement
+		{
+			keyBinding = new KeyBinding
+			{
+				Key = key
+			};
+
+			@this.InputBindings.Add(keyBinding);
+			return @this;
+		}
+
 		private static TUiElement Visibility<TUiElement>([NotNull] this TUiElement @this, V visibility)
 			where TUiElement : UIElement
 		{
