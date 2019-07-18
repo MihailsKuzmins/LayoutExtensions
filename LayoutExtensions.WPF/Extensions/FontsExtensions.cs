@@ -2,11 +2,11 @@
 
 namespace LayoutExtensions.WPF
 {
-	internal static class FontSizesExtensions
+	internal static class FontsExtensions
 	{
-		internal static string ToFontString(this Fonts font)
+		internal static string ToFontString(this Fonts source)
 		{
-			switch (font)
+			switch (source)
 			{
 				case Fonts.Aharoni:
 					return "Aharoni";
@@ -143,7 +143,7 @@ namespace LayoutExtensions.WPF
 				case Fonts.Wingdings:
 					return "Wingdings";
 				default:
-					throw new ArgumentOutOfRangeException(nameof(font));
+					throw new ArgumentOutOfRangeException($"Cannot resolve font name for {source}", nameof(source));
 			}
 		}
 	}

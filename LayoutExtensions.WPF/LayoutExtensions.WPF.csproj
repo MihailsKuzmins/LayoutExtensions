@@ -52,6 +52,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Images.cs" />
+    <Compile Include="Extensions\ImagesExtensions.cs" />
     <Compile Include="src\Standard\BorderExtensions.cs" />
     <Compile Include="src\Standard\CollectionViewSourceExtensions.cs" />
     <Compile Include="src\Generic\ContentControlExtensions.cs" />
@@ -61,7 +63,7 @@
     <Compile Include="src\Generic\DependencyObjectExtensions.cs" />
     <Compile Include="Enums\Fonts.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\FontSizesExtensions.cs" />
+    <Compile Include="Extensions\FontsExtensions.cs" />
     <Compile Include="src\Generic\FrameworkElementExtensions.cs" />
     <Compile Include="src\Standard\DataTemplateExtensions.cs" />
     <Compile Include="src\Standard\GridExtensions.cs" />
