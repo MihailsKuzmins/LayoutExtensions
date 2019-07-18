@@ -70,7 +70,7 @@ Example:
 Available extensions:
 1) DependencyObject - Assign;
 
-2) UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed;
+2) UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin;
 
 3) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
 
