@@ -62,13 +62,13 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock FontWeight<TControl>([NotNull] this TextBlock @this, FontWeight fontWeight)
+		public static TextBlock FontWeight([NotNull] this TextBlock @this, FontWeight fontWeight)
 		{
 			@this.FontWeight = fontWeight;
 			return @this;
 		}
 
-		public static TextBlock Bold<TControl>([NotNull] this TextBlock @this)
+		public static TextBlock Bold([NotNull] this TextBlock @this)
 		{
 			@this.FontWeight = FontWeights.Bold;
 			return @this;
