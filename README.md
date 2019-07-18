@@ -68,38 +68,44 @@ Example:
 	}
 
 Available extensions:
- - DependencyObject - Assign;
+ - ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
+ 
+ - Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, Bold, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
+  
+ - Decorator - Child;
 
- - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin;
+ - DependencyObject - Assign;
 
  - FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
 
- - Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
-
- - ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
-
  - Panel - Background;
+ 
+ - TextBoxBase - ReadOnly;
 
- - TextBlock - Foreground, FontSize, FontFamily;
+ - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin.
 
- - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
-
- - DataTemplate - From, DataType;
-
- - StackPanel - Horizontal, Vertical;
-
- - Grid - Rows, Cols;
-
- - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
-
- - Decorator - Child;
 
  - Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
-
- - ContextMenu - ApplyTo, MenuItem;
-
+ 
  - CollectionViewSource - GroupDescription;
-
+ 
+ - ContextMenu - ApplyTo, MenuItem;
+ 
+ - DataTemplate - From, DataType;
+ 
+ - Grid - Rows, Cols;
+ 
  - Image - Source;
+ 
+ - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
+ 
+ - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
+ 
+ - StackPanel - Horizontal, Vertical;
+ 
+ - Style - Setter;
+  
+ - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold.
+ 
 
  - String - ToImageSource.
