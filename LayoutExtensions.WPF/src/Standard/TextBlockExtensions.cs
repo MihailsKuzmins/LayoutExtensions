@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -58,6 +59,20 @@ namespace LayoutExtensions.WPF
 		public static TextBlock FontFamily([NotNull] this TextBlock @this, Fonts font)
 		{
 			@this.FontFamily = new FontFamily(font.ToFontString());
+			return @this;
+		}
+
+		public static TControl FontWeight<TControl>([NotNull] this TControl @this, FontWeight fontWeight)
+			where TControl : Control
+		{
+			@this.FontWeight = fontWeight;
+			return @this;
+		}
+
+		public static TControl Bold<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			@this.FontWeight = FontWeights.Bold;
 			return @this;
 		}
 	}

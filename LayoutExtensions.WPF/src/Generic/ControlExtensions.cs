@@ -293,6 +293,13 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TControl Bold<TControl>([NotNull] this TControl @this)
+			where TControl : Control
+		{
+			@this.FontWeight = FontWeights.Bold;
+			return @this;
+		}
+
 		public static TControl BorderBrush<TControl>([NotNull] this TControl @this, Brush brush)
 			where TControl : Control
 		{
