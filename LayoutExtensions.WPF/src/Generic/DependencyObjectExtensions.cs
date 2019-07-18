@@ -5,10 +5,10 @@ namespace LayoutExtensions.WPF
 {
 	public static class DependencyObjectExtensions
 	{
-		public static void Assign<TDependencyObject>([NotNull] this TDependencyObject dependencyObject, out TDependencyObject assignElement)
+		public static void Assign<TDependencyObject>([NotNull] this TDependencyObject @this, out TDependencyObject assignElement)
 			where TDependencyObject : DependencyObject
 		{
-			assignElement = dependencyObject;
+			assignElement = @this;
 		}
 	}
 }

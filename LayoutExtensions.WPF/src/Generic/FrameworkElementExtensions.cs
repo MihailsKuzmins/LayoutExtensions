@@ -98,6 +98,13 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TFrameworkElement Margin<TFrameworkElement>([NotNull] this TFrameworkElement @this, Thickness margin)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.Margin = margin;
+			return @this;
+		}
+
 		public static TFrameworkElement Margin<TFrameworkElement>([NotNull] this TFrameworkElement @this, double uniform)
 			where TFrameworkElement : FrameworkElement
 		{
@@ -289,24 +296,6 @@ namespace LayoutExtensions.WPF
 			where TFrameworkElement : FrameworkElement
 		{
 			panel.Children.Add(@this);
-			return @this;
-		}
-
-		public static TFrameworkElement Row<TFrameworkElement>([NotNull] this TFrameworkElement @this, int row, int rowSpan = 1)
-			where TFrameworkElement : FrameworkElement
-		{
-			Grid.SetRow(@this, row);
-			Grid.SetRowSpan(@this, rowSpan);
-
-			return @this;
-		}
-
-		public static TFrameworkElement Col<TFrameworkElement>([NotNull] this TFrameworkElement @this, int column, int colSpan = 1)
-			where TFrameworkElement : FrameworkElement
-		{
-			Grid.SetColumn(@this, column);
-			Grid.SetColumnSpan(@this, colSpan);
-
 			return @this;
 		}
 

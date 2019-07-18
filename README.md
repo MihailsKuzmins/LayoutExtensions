@@ -24,8 +24,9 @@ Example:
 			    .AddToPanel(contentGrid)
 			    .Assign(out _titleLabel);
 
-			new ItemsControl { ItemTemplate = CreateItemTemplate() }
+			new ItemsControl()
 			    .Row(1, 2)
+			    .ItemTemplate(CreateItemTemplate())
 			    .AddToPanel(contentGrid)
 			    .Assign(out _itemsControl);
 
@@ -52,39 +53,51 @@ Example:
 			yield return new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
 		}
 
-		private static DataTemplate CreateItemTemplate()
-		{
-			var viewType = typeof(SomeExampleView);
-
-			var templateFactory = new FrameworkElementFactory(viewType);
-			templateFactory.SetBinding(DataContextProperty, new Binding("."));
-
-			return new DataTemplate(viewType)
-			{
-				VisualTree = templateFactory
-			};
-		}
+		private static DataTemplate CreateItemTemplate() =>
+			new DataTemplate()
+			    .From(typeof(SomeExampleView))
+			    .DataType(typeof(SomeExampleViewModel));
 	}
 
 Available extensions:
-1) DependencyObject - Assign;
+ - ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
+ 
+ - Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, Bold, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
+  
+ - Decorator - Child;
 
-2) UiElement - Visible, Hidden, Collapsed;
+ - DependencyObject - Assign;
 
-3) FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel, Row, Col;
+ - FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
 
-4) Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
+ - Panel - Background;
+ 
+ - TextBoxBase - ReadOnly;
 
-5) ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
+ - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransformOrigin, KeyBinding.
 
-6) ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
 
-7) StackPanel - Horizontal, Vertical;
+ - Border - BorderBrush, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, CornerRadius;
+ 
+ - CollectionViewSource - GroupDescription;
+ 
+ - ContextMenu - ApplyTo, MenuItem;
+ 
+ - DataTemplate - From, DataType;
+ 
+ - Grid - Rows, Cols;
+ 
+ - Image - Source;
+ 
+ - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
+ 
+ - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
+ 
+ - StackPanel - Horizontal, Vertical;
+ 
+ - Style - Setter;
+  
+ - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold.
+ 
 
-8) Grid - Rows, Cols;
-
-9) ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
-
-10) ContextMenu - ApplyTo, MenuItem;
-
-11) CollectionViewSource - GroupDescription.
+ - String - ToImageSource.
