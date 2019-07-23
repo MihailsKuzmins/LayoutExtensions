@@ -69,6 +69,8 @@ Available extensions:
  - DependencyObject - Assign;
 
  - FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
+ 
+ - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
 
  - Panel - Background;
  
@@ -81,6 +83,8 @@ Available extensions:
  
  - CollectionViewSource - GroupDescription;
  
+ - ComboBox - Editable;
+ 
  - ContextMenu - ApplyTo, MenuItem;
  
  - DataTemplate - From, DataType;
@@ -88,8 +92,6 @@ Available extensions:
  - Grid - Rows, Cols;
  
  - Image - Source;
- 
- - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
  
  - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisabledV;
  
