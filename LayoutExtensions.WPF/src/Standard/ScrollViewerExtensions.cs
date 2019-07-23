@@ -55,7 +55,7 @@ namespace LayoutExtensions.WPF
 		public static ScrollViewer ScrollBarDisabledH([NotNull] this ScrollViewer @this) =>
 			 @this.ScrollBarVisibilityH(SBV.Disabled);
 
-		public static ScrollViewer ScrollBarDisbledV([NotNull] this ScrollViewer @this) =>
+		public static ScrollViewer ScrollBarDisabledV([NotNull] this ScrollViewer @this) =>
 			 @this.ScrollBarVisibilityV(SBV.Disabled);
 
 		private static ScrollViewer ScrollBarVisibilityH([NotNull] this ScrollViewer @this, SBV scrollBarVisibility)
