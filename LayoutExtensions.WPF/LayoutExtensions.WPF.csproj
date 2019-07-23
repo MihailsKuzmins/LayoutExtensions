@@ -59,6 +59,7 @@
     <Compile Include="src\Standard\BorderExtensions.cs" />
     <Compile Include="src\Standard\CollectionViewSourceExtensions.cs" />
     <Compile Include="src\Generic\ContentControlExtensions.cs" />
+    <Compile Include="src\Standard\ComboBoxExtensions.cs" />
     <Compile Include="src\Standard\ContextMenuExtensions.cs" />
     <Compile Include="src\Generic\ControlExtensions.cs" />
     <Compile Include="src\Generic\DecoratorExtensions.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="src\Standard\DataTemplateExtensions.cs" />
     <Compile Include="src\Standard\GridExtensions.cs" />
     <Compile Include="src\Standard\ImageExtensions.cs" />
-    <Compile Include="src\Standard\ItemsControlExtensions.cs" />
+    <Compile Include="src\Generic\ItemsControlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
