@@ -85,7 +85,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="src\Standard\NotnullAttribute.cs" />
     <Compile Include="src\Standard\ScrollViewerExtensions.cs" />
     <Compile Include="src\Standard\StackPanelExtensions.cs" />
     <Compile Include="src\Standard\StyleExtensions.cs" />
