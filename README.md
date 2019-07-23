@@ -91,7 +91,7 @@ Available extensions:
  
  - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
  
- - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisbledV;
+ - ScrollBar - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisabledV;
  
  - StackPanel - Horizontal, Vertical;
  
