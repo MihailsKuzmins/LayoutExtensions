@@ -92,12 +92,59 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, KeyBinding keyBinding)
+			where TUiElement : UIElement
+		{
+			@this.InputBindings.Add(keyBinding);
+			return @this;
+		}
+
 		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, Key key, out KeyBinding keyBinding)
 			where TUiElement : UIElement
 		{
 			keyBinding = new KeyBinding
 			{
 				Key = key
+			};
+
+			@this.InputBindings.Add(keyBinding);
+			return @this;
+		}
+
+		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, Key key, ICommand command)
+			where TUiElement : UIElement
+		{
+			var keyBinding = new KeyBinding
+			{
+				Key = key,
+				Command = command
+			};
+
+			@this.InputBindings.Add(keyBinding);
+			return @this;
+		}
+
+		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, ModifierKeys modifier, Key key, out KeyBinding keyBinding)
+			where TUiElement : UIElement
+		{
+			keyBinding = new KeyBinding
+			{
+				Key = key,
+				Modifiers = modifier
+			};
+
+			@this.InputBindings.Add(keyBinding);
+			return @this;
+		}
+
+		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, ModifierKeys modifier, Key key, ICommand command)
+			where TUiElement : UIElement
+		{
+			var keyBinding = new KeyBinding
+			{
+				Key = key,
+				Modifiers = modifier,
+				Command = command
 			};
 
 			@this.InputBindings.Add(keyBinding);
