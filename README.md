@@ -99,7 +99,7 @@ Available extensions:
  
  - Style - Setter;
   
- - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold.
+ - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold, Text.
  
 
  - String - ToImageSource.
