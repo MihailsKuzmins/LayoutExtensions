@@ -60,6 +60,8 @@ Example:
 	}
 
 Available extensions:
+ - ButtonBaseExtensions - Command;
+
  - ContentControl - ContentTemplate, Content, ContentStringFormat, ContentTemplateSelector;
  
  - Control - FontStyle, FontStretch, FontSize, FontFamily, FontFamily, Background, Foreground, Border, BorderHorizontal, BorderVertical, BorderLeft, BorderTop, BorderRight, BorderBottom, IsTabStop, TabIndex, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, Template, FontWeight, Bold, BorderBrush, ContentTop, ContentCenterV, ContentCenterH, ContentCenter, ContentBotton, ContentStretchV, ContentStretchH, ContentStretch, ContentLeft, ContentRight;
@@ -99,7 +101,7 @@ Available extensions:
  
  - Style - Setter;
   
- - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold.
+ - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold, Text.
  
 
  - String - ToImageSource.

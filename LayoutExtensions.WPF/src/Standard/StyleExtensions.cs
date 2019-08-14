@@ -11,5 +11,11 @@ namespace LayoutExtensions.WPF
 			@this.Setters.Add(new Setter(dependencyProperty, binding));
 			return @this;
 		}
+
+		public static Style Setter([NotNull] this Style @this, DependencyProperty dependencyProperty, object value)
+		{
+			@this.Setters.Add(new Setter(dependencyProperty, value));
+			return @this;
+		}
 	}
 }
