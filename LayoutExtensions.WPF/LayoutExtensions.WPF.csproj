@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Enums\Images.cs" />
     <Compile Include="Extensions\ImagesExtensions.cs" />
+    <Compile Include="src\Generic\ButtonBaseExtensions.cs" />
     <Compile Include="src\Generic\PanelExtensions.cs" />
     <Compile Include="src\Generic\TextBoxBaseExtensions.cs" />
     <Compile Include="src\Standard\BorderExtensions.cs" />
