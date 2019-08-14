@@ -2,7 +2,7 @@
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
-namespace LayoutExtensions.WPF.src.Generic
+namespace LayoutExtensions.WPF
 {
 	public static class ButtonBaseExtensions
 	{
