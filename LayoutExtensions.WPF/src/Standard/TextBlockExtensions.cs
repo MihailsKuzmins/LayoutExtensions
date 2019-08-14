@@ -73,5 +73,11 @@ namespace LayoutExtensions.WPF
 			@this.FontWeight = FontWeights.Bold;
 			return @this;
 		}
+
+		public static TextBlock Text([NotNull] this TextBlock @this, string text)
+		{
+			@this.Text = text;
+			return @this;
+		}
 	}
 }
