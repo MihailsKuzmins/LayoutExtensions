@@ -3,6 +3,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using TT = System.Windows.TextTrimming;
 using TW = System.Windows.TextWrapping;
 
 namespace LayoutExtensions.WPF
@@ -161,5 +162,20 @@ namespace LayoutExtensions.WPF
 
 		public static TextBlock Wrap([NotNull] this TextBlock @this) =>
 			@this.TextWrapping(TW.Wrap);
+
+		public static TextBlock TextTrimming([NotNull] this TextBlock @this, TT textTrimming)
+		{
+			@this.TextTrimming = textTrimming;
+			return @this;
+		}
+
+		public static TextBlock TextTrimmingNone([NotNull] this TextBlock @this) =>
+			@this.TextTrimming(TT.None);
+
+		public static TextBlock TextTrimmingCharacterEllipsis([NotNull] this TextBlock @this) =>
+			@this.TextTrimming(TT.CharacterEllipsis);
+
+		public static TextBlock TextTrimmingWordEllipsis([NotNull] this TextBlock @this) =>
+			@this.TextTrimming(TT.WordEllipsis);
 	}
 }
