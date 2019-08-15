@@ -101,7 +101,7 @@ Available extensions:
  
  - Style - Setter;
   
- - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold, Text.
+ - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold, Text, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom;
  
 
  - String - ToImageSource.
