@@ -101,7 +101,7 @@ Available extensions:
  
  - Style - Setter;
   
- - TextBlock - Foreground, FontSize, FontFamily, FontWeight, Bold, Text.
+ - TextBlock - FontWeight, Bold, FontStyle, Italic, Oblique, FontFamily, Text, FontStretch, BaselineOffset, FontSize, TextWrapping, WrapWithOverflow, NoWrap, Wrap, Background, TextDecorations, TextEffects, LineHeight, LineStackingStrategy, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, TextAlignment, TextLeft, TextRight, TextCenter, TextJustify, TextTrimming, TextTrimmingNone, TextTrimmingCharacterEllipsis, TextTrimmingWordEllipsis, IsHyphenationEnabled, Foreground;
  
 
  - String - ToImageSource.
