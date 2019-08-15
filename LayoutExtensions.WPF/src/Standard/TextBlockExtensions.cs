@@ -3,6 +3,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using TW = System.Windows.TextWrapping;
 
 namespace LayoutExtensions.WPF
 {
@@ -145,5 +146,20 @@ namespace LayoutExtensions.WPF
 			@this.Padding = new Thickness(Padding.Left, Padding.Top, Padding.Right, bottom);
 			return @this;
 		}
+
+		public static TextBlock TextWrapping([NotNull] this TextBlock @this, TW textWrapping)
+		{
+			@this.TextWrapping = textWrapping;
+			return @this;
+		}
+
+		public static TextBlock WrapWithOverflow([NotNull] this TextBlock @this) =>
+			@this.TextWrapping(TW.WrapWithOverflow);
+
+		public static TextBlock NoWrap([NotNull] this TextBlock @this) =>
+			@this.TextWrapping(TW.NoWrap);
+
+		public static TextBlock Wrap([NotNull] this TextBlock @this) =>
+			@this.TextWrapping(TW.Wrap);
 	}
 }
