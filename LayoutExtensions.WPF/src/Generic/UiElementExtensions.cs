@@ -52,6 +52,19 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TUiElement MouseBinding<TUiElement>([NotNull] this TUiElement @this, MouseAction mouseAction, ICommand command)
+			where TUiElement : UIElement
+		{
+			var mouseBinding = new MouseBinding
+			{
+				MouseAction = mouseAction,
+				Command = command
+			};
+
+			@this.InputBindings.Add(mouseBinding);
+			return @this;
+		}
+
 		public static TUiElement Visible<TUiElement>([NotNull] this TUiElement @this)
 			where TUiElement : UIElement
 		{
