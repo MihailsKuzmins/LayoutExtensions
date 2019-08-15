@@ -177,5 +177,29 @@ namespace LayoutExtensions.WPF
 
 		public static TextBlock TextTrimmingWordEllipsis([NotNull] this TextBlock @this) =>
 			@this.TextTrimming(TT.WordEllipsis);
+
+		public static TextBlock Background([NotNull] this TextBlock @this, Brush brush)
+		{
+			@this.Background = brush;
+			return @this;
+		}
+
+		public static TextBlock Background([NotNull] this TextBlock @this, Color color)
+		{
+			@this.Background = new SolidColorBrush(color);
+			return @this;
+		}
+
+		public static TextBlock Background([NotNull] this TextBlock @this, byte a, byte r, byte g, byte b)
+		{
+			@this.Background = new SolidColorBrush(Color.FromArgb(a, r, g, b));
+			return @this;
+		}
+
+		public static TextBlock Background([NotNull] this TextBlock @this, byte r, byte g, byte b)
+		{
+			@this.Background = new SolidColorBrush(Color.FromRgb(r, g, b));
+			return @this;
+		}
 	}
 }
