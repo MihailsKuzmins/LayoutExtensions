@@ -34,6 +34,14 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static ContextMenu MenuItem([NotNull] this ContextMenu @this, string header, out MenuItem menuItem)
+		{
+			menuItem = CreateMenuItem(header, null);
+			@this.Items.Add(menuItem);
+
+			return @this;
+		}
+
 		private static MenuItem CreateMenuItem(string header, ICommand command) =>
 			new MenuItem
 			{
