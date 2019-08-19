@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LayoutExtensions.WPF</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <authors>Mihails Kuzmins</authors>
     <owners>Mihails Kuzmins</owners>
     <licenseUrl>https://raw.githubusercontent.com/MihailsKuzmins/LayoutExtensions/master/LICENSE</licenseUrl>
