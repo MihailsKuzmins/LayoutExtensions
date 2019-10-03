@@ -4,17 +4,13 @@ namespace LayoutExtensions.WPF.Extensions
 {
 	internal static class ImagesExtensions
 	{
-		internal static string ToImageString(this Images source)
-		{
-			switch (source)
+		internal static string ToImageString(this Images source) =>
+			source switch
 			{
-				case Images.Jpg:
-					return "jpg";
-				case Images.Png:
-					return "png";
-				default:
-					throw new ArgumentOutOfRangeException($"Cannot resolve image extension for {source}", nameof(source));
-			}
-		}
+				Images.Jpg => "jpg",
+				Images.Png => "png",
+				Images.Ico => "ico",
+				_ => throw new ArgumentOutOfRangeException($"Cannot resolve image extension for {source}", nameof(source)),
+			};
 	}
 }
