@@ -1,150 +1,80 @@
 ﻿using System;
 
-namespace LayoutExtensions.WPF
+namespace LayoutExtensions.WPF.Extensions
 {
 	internal static class FontsExtensions
 	{
-		internal static string ToFontString(this Fonts source)
-		{
-			switch (source)
+		internal static string ToFontString(this Fonts source) =>
+			source switch
 			{
-				case Fonts.Aharoni:
-					return "Aharoni";
-				case Fonts.Andalus:
-					return "Andalus";
-				case Fonts.AngsanaUpc:
-					return "AngsanaUPC";
-				case Fonts.AngsanaNew:
-					return "Angsana New";
-				case Fonts.ArabicTransparent:
-					return "Arabic Transparent";
-				case Fonts.Arial:
-					return "Arial";
-				case Fonts.ArialBlack:
-					return "Arial Black";
-				case Fonts.Batang:
-					return "Batang";
-				case Fonts.BrowalliaUpc:
-					return "BrowalliaUPC";
-				case Fonts.BrowalliaNew:
-					return "Browallia New";
-				case Fonts.ComicSansMs:
-					return "Comic Sans MS";
-				case Fonts.CordiaUpc:
-					return "CordiaUPC";
-				case Fonts.CordiaNew:
-					return "Cordia New";
-				case Fonts.CourierNew:
-					return "Courier New";
-				case Fonts.David:
-					return "David";
-				case Fonts.DfKaiSb:
-					return "DFKai-SB";
-				case Fonts.DilleniaUpc:
-					return "DilleniaUPC";
-				case Fonts.EstrangeloEdessa:
-					return "Estrangelo Edessa";
-				case Fonts.EucrosiaUpc:
-					return "EucrosiaUPC";
-				case Fonts.FixedMiriamTransparent:
-					return "Fixed Miriam Transparent";
-				case Fonts.FranklinGothic:
-					return "Franklin Gothic";
-				case Fonts.FrankRuehl:
-					return "FrankRuehl";
-				case Fonts.FreesiaUpc:
-					return "FreesiaUPC";
-				case Fonts.Gautami:
-					return "Gautami";
-				case Fonts.Georgia:
-					return "Georgia";
-				case Fonts.Gulim:
-					return "Gulim";
-				case Fonts.Impact:
-					return "Impact";
-				case Fonts.IrisUpc:
-					return "IrisUPC";
-				case Fonts.JasmineUpc:
-					return "JasmineUPC";
-				case Fonts.KaiTi:
-					return "KaiTi";
-				case Fonts.Kartika:
-					return "Kartika";
-				case Fonts.KodchiangUpc:
-					return "KodchiangUPC";
-				case Fonts.Latha:
-					return "Latha";
-				case Fonts.LevenimMt:
-					return "Levenim MT";
-				case Fonts.LilyUpc:
-					return "LilyUPC";
-				case Fonts.LucidaConsole:
-					return "Lucida Console";
-				case Fonts.LucidaSans:
-					return "Lucida Sans";
-				case Fonts.LucidaSansUnicode:
-					return "Lucida Sans Unicode";
-				case Fonts.Mangal:
-					return "Mangal";
-				case Fonts.Marlett:
-					return "Marlett";
-				case Fonts.MicrosoftSansSerif:
-					return "Microsoft Sans Serif";
-				case Fonts.PMingLiU:
-					return "PMingLiU";
-				case Fonts.Miriam:
-					return "Miriam";
-				case Fonts.MiriamFixed:
-					return "Miriam Fixed";
-				case Fonts.MsGothic:
-					return "MS Gothic";
-				case Fonts.MsMincho:
-					return "MS Mincho";
-				case Fonts.MvBoli:
-					return "MV Boli";
-				case Fonts.Narkisim:
-					return "Narkisim";
-				case Fonts.PalatinoLinotype:
-					return "Palatino Linotype";
-				case Fonts.PMingLiUExtB:
-					return "PMingLiU-ExtB";
-				case Fonts.Raavi:
-					return "Raavi";
-				case Fonts.Rod:
-					return "Rod";
-				case Fonts.Shruti:
-					return "Shruti";
-				case Fonts.SimHei:
-					return "SimHei";
-				case Fonts.SimplifiedArabicFixed:
-					return "Simplified Arabic Fixed";
-				case Fonts.SimSunExtB:
-					return "SimSun-ExtB";
-				case Fonts.Sylfaen:
-					return "Sylfaen";
-				case Fonts.Symbol:
-					return "Symbol";
-				case Fonts.Tahoma:
-					return "Tahoma";
-				case Fonts.TimesNewRoman:
-					return "Times New Roman";
-				case Fonts.TraditionalArabic:
-					return "Traditional Arabic";
-				case Fonts.TrebuchetMs:
-					return "Trebuchet MS";
-				case Fonts.Tunga:
-					return "Tunga";
-				case Fonts.Verdana:
-					return "Verdana";
-				case Fonts.Vrinda:
-					return "Vrinda";
-				case Fonts.Webdings:
-					return "Webdings";
-				case Fonts.Wingdings:
-					return "Wingdings";
-				default:
-					throw new ArgumentOutOfRangeException($"Cannot resolve font name for {source}", nameof(source));
-			}
-		}
+				Fonts.Aharoni => "Aharoni",
+				Fonts.Andalus => "Andalus",
+				Fonts.AngsanaUpc => "AngsanaUPC",
+				Fonts.AngsanaNew => "Angsana New",
+				Fonts.ArabicTransparent => "Arabic Transparent",
+				Fonts.Arial => "Arial",
+				Fonts.ArialBlack => "Arial Black",
+				Fonts.Batang => "Batang",
+				Fonts.BrowalliaUpc => "BrowalliaUPC",
+				Fonts.BrowalliaNew => "Browallia New",
+				Fonts.ComicSansMs => "Comic Sans MS",
+				Fonts.CordiaUpc => "CordiaUPC",
+				Fonts.CordiaNew => "Cordia New",
+				Fonts.CourierNew => "Courier New",
+				Fonts.David => "David",
+				Fonts.DfKaiSb => "DFKai-SB",
+				Fonts.DilleniaUpc => "DilleniaUPC",
+				Fonts.EstrangeloEdessa => "Estrangelo Edessa",
+				Fonts.EucrosiaUpc => "EucrosiaUPC",
+				Fonts.FixedMiriamTransparent => "Fixed Miriam Transparent",
+				Fonts.FranklinGothic => "Franklin Gothic",
+				Fonts.FrankRuehl => "FrankRuehl",
+				Fonts.FreesiaUpc => "FreesiaUPC",
+				Fonts.Gautami => "Gautami",
+				Fonts.Georgia => "Georgia",
+				Fonts.Gulim => "Gulim",
+				Fonts.Impact => "Impact",
+				Fonts.IrisUpc => "IrisUPC",
+				Fonts.JasmineUpc => "JasmineUPC",
+				Fonts.KaiTi => "KaiTi",
+				Fonts.Kartika => "Kartika",
+				Fonts.KodchiangUpc => "KodchiangUPC",
+				Fonts.Latha => "Latha",
+				Fonts.LevenimMt => "Levenim MT",
+				Fonts.LilyUpc => "LilyUPC",
+				Fonts.LucidaConsole => "Lucida Console",
+				Fonts.LucidaSans => "Lucida Sans",
+				Fonts.LucidaSansUnicode => "Lucida Sans Unicode",
+				Fonts.Mangal => "Mangal",
+				Fonts.Marlett => "Marlett",
+				Fonts.MicrosoftSansSerif => "Microsoft Sans Serif",
+				Fonts.PMingLiU => "PMingLiU",
+				Fonts.Miriam => "Miriam",
+				Fonts.MiriamFixed => "Miriam Fixed",
+				Fonts.MsGothic => "MS Gothic",
+				Fonts.MsMincho => "MS Mincho",
+				Fonts.MvBoli => "MV Boli",
+				Fonts.Narkisim => "Narkisim",
+				Fonts.PalatinoLinotype => "Palatino Linotype",
+				Fonts.PMingLiUExtB => "PMingLiU-ExtB",
+				Fonts.Raavi => "Raavi",
+				Fonts.Rod => "Rod",
+				Fonts.Shruti => "Shruti",
+				Fonts.SimHei => "SimHei",
+				Fonts.SimplifiedArabicFixed => "Simplified Arabic Fixed",
+				Fonts.SimSunExtB => "SimSun-ExtB",
+				Fonts.Sylfaen => "Sylfaen",
+				Fonts.Symbol => "Symbol",
+				Fonts.Tahoma => "Tahoma",
+				Fonts.TimesNewRoman => "Times New Roman",
+				Fonts.TraditionalArabic => "Traditional Arabic",
+				Fonts.TrebuchetMs => "Trebuchet MS",
+				Fonts.Tunga => "Tunga",
+				Fonts.Verdana => "Verdana",
+				Fonts.Vrinda => "Vrinda",
+				Fonts.Webdings => "Webdings",
+				Fonts.Wingdings => "Wingdings",
+				_ => throw new ArgumentOutOfRangeException($"Cannot resolve font name for {source}", nameof(source)),
+			};
 	}
 }

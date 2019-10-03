@@ -3,6 +3,7 @@
 	public enum Images : byte
 	{
 		Png = 0,
-		Jpg
+		Jpg,
+		Ico
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace LayoutExtensions.WPF
 {
-	public enum Fonts
+	public enum Fonts : byte
 	{
 		Aharoni,
 		Andalus,
