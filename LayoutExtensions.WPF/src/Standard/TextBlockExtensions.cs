@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using LayoutExtensions.WPF.Extensions;
 using System;
 using System.Windows;
 using System.Windows.Controls;
