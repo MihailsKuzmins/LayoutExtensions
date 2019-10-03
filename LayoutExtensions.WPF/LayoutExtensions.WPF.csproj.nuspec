@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>LayoutExtensions.WPF</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <authors>Mihails Kuzmins</authors>
     <owners>Mihails Kuzmins</owners>
     <licenseUrl>https://raw.githubusercontent.com/MihailsKuzmins/LayoutExtensions/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/MihailsKuzmins/LayoutExtensions</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/MihailsKuzmins/LayoutExtensions/master/LayoutEx.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Layout extensions for WPF controls to create them in c#</description>
+    <description>Layout extensions for creating WPF controls in c#</description>
     <releaseNotes>https://github.com/MihailsKuzmins/LayoutExtensions/releases</releaseNotes>
     <copyright>Copyright © MihailsKuzmins 2019</copyright>
     <tags>WPF C# layout extensions</tags>
