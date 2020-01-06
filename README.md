@@ -14,8 +14,8 @@ Example:
 		public MainWindow()
 		{
 			new Grid()
-			    .Rows(CreateRowDefinitions())
-			    .Cols(CreateColumnDefinitions())
+			    .Rows(CreateRowDefinitions)
+			    .Cols(CreateColumnDefinitions)
 			    .Assign(out var contentGrid);
 
 			new Label()
@@ -70,7 +70,7 @@ Available extensions:
 
  - DependencyObject - Assign;
 
- - FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel;
+ - FrameworkElement - Width, MinWidth, MaxWidth, Height, MinHeight, MaxWidth, Tag, GetTag, Name, DataContext, GetDataContext, UseLayoutRounding, FlowDirection, Margin, MarginHorizontal, MarginVertical, MarginLeft, MarginTop, MarginRight, MarginBottom, Style, OverridesDefaultStyle, ContextMenu, ToolTip, ForceCursor, Cursor, FocusVisualStyle, Top, CenterV, CenterH, Center, Botton, StretchV, StretchH, Stretch, Left, Right, AddToPanel, SetBinding;
  
  - ItemsControl - GroupStyle, ItemsPanel, ItemTemplate, ItemContainerStyle;
 
