@@ -5,21 +5,21 @@ namespace LayoutExtensions.WPF
 {
 	public static class BindingExtensions
 	{
-		public static TFrameworkElement SetBinding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path)
+		public static TFrameworkElement SetBindingEx<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.SetBinding(dp, path);
 			return @this;
 		}
 
-		public static TFrameworkElement SetBinding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, Binding binding)
+		public static TFrameworkElement SetBindingEx<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, Binding binding)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.SetBinding(dp, binding);
 			return @this;
 		}
 
-		public static TFrameworkElement SetBinding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path, BindingMode bindingMode)
+		public static TFrameworkElement SetBindingEx<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path, BindingMode bindingMode)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.SetBinding(dp, new Binding(path)
@@ -29,7 +29,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TFrameworkElement SetBinding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path, IValueConverter converter)
+		public static TFrameworkElement SetBindingEx<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path, IValueConverter converter)
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.SetBinding(dp, new Binding(path)
