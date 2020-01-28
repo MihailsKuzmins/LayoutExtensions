@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Data;
 
@@ -7,7 +6,7 @@ namespace LayoutExtensions.WPF
 {
 	public static class DataTemplateExtensions
 	{
-		public static DataTemplate From([NotNull] this DataTemplate @this, Type viewType)
+		public static DataTemplate From(this DataTemplate @this, Type viewType)
 		{
 			var templateFactory = new FrameworkElementFactory(viewType);
 			templateFactory.SetBinding(FrameworkElement.DataContextProperty, new Binding());
@@ -16,7 +15,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static DataTemplate DataType([NotNull] this DataTemplate @this, Type dataType)
+		public static DataTemplate DataType(this DataTemplate @this, Type dataType)
 		{
 			@this.DataType = dataType;
 			return @this;

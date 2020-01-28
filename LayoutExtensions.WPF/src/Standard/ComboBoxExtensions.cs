@@ -1,11 +1,10 @@
-﻿using JetBrains.Annotations;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace LayoutExtensions.WPF
 {
 	public static class ComboBoxExtensions
 	{
-		public static ComboBox Editable([NotNull] this ComboBox @this)
+		public static ComboBox Editable(this ComboBox @this)
 		{
 			@this.IsEditable = true;
 			return @this;

@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using LayoutExtensions.WPF.Extensions;
+﻿using LayoutExtensions.WPF.Extensions;
 using System;
 using System.IO;
 using System.Reflection;
@@ -10,10 +9,10 @@ namespace LayoutExtensions.WPF
 {
 	public static class StringExtensions
 	{
-		public static ImageSource ToImageSource([NotNull] this string @this, string extension, Assembly assembly, params string[] pathSegments) =>
+		public static ImageSource ToImageSource(this string @this, string extension, Assembly assembly, params string[] pathSegments) =>
 			GetImageSource(@this, extension, assembly, pathSegments);
 
-		public static ImageSource ToImageSource([NotNull] this string @this, Images extension, Assembly assembly, params string[] pathSegments)
+		public static ImageSource ToImageSource(this string @this, Images extension, Assembly assembly, params string[] pathSegments)
 		{
 			var extensionName = extension.ToImageString();
 			return GetImageSource(@this, extensionName, assembly, pathSegments);

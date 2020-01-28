@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using LayoutExtensions.WPF.Extensions;
+﻿using LayoutExtensions.WPF.Extensions;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,160 +11,160 @@ namespace LayoutExtensions.WPF
 {
 	public static class TextBlockExtensions
 	{
-		public static TextBlock FontWeight([NotNull] this TextBlock @this, FontWeight fontWeight)
+		public static TextBlock FontWeight(this TextBlock @this, FontWeight fontWeight)
 		{
 			@this.FontWeight = fontWeight;
 			return @this;
 		}
 
-		public static TextBlock Bold([NotNull] this TextBlock @this)
+		public static TextBlock Bold(this TextBlock @this)
 		{
 			@this.FontWeight = FontWeights.Bold;
 			return @this;
 		}
 
-		public static TextBlock FontStyle([NotNull] this TextBlock @this, FontStyle fontStyle)
+		public static TextBlock FontStyle(this TextBlock @this, FontStyle fontStyle)
 		{
 			@this.FontStyle = fontStyle;
 			return @this;
 		}
 
-		public static TextBlock Italic([NotNull] this TextBlock @this) =>
+		public static TextBlock Italic(this TextBlock @this) =>
 			@this.FontStyle(FontStyles.Italic);
 
-		public static TextBlock Oblique([NotNull] this TextBlock @this) =>
+		public static TextBlock Oblique(this TextBlock @this) =>
 			@this.FontStyle(FontStyles.Oblique);
 
-		public static TextBlock FontFamily([NotNull] this TextBlock @this, FontFamily fontFamily)
+		public static TextBlock FontFamily(this TextBlock @this, FontFamily fontFamily)
 		{
 			@this.FontFamily = fontFamily;
 			return @this;
 		}
 
-		public static TextBlock FontFamily([NotNull] this TextBlock @this, string fontFamily)
+		public static TextBlock FontFamily(this TextBlock @this, string fontFamily)
 		{
 			@this.FontFamily = new FontFamily(fontFamily);
 			return @this;
 		}
 
-		public static TextBlock FontFamily([NotNull] this TextBlock @this, Uri uri, string fontFamily)
+		public static TextBlock FontFamily(this TextBlock @this, Uri uri, string fontFamily)
 		{
 			@this.FontFamily = new FontFamily(uri, fontFamily);
 			return @this;
 		}
 
-		public static TextBlock FontFamily([NotNull] this TextBlock @this, Fonts font)
+		public static TextBlock FontFamily(this TextBlock @this, Fonts font)
 		{
 			@this.FontFamily = new FontFamily(font.ToFontString());
 			return @this;
 		}
 
-		public static TextBlock Text([NotNull] this TextBlock @this, string text)
+		public static TextBlock Text(this TextBlock @this, string text)
 		{
 			@this.Text = text;
 			return @this;
 		}
 
-		public static TextBlock FontStretch([NotNull] this TextBlock @this, FontStretch fontStretch)
+		public static TextBlock FontStretch(this TextBlock @this, FontStretch fontStretch)
 		{
 			@this.FontStretch = fontStretch;
 			return @this;
 		}
 
-		public static TextBlock BaselineOffset([NotNull] this TextBlock @this, double baselineOffset)
+		public static TextBlock BaselineOffset(this TextBlock @this, double baselineOffset)
 		{
 			@this.BaselineOffset = baselineOffset;
 			return @this;
 		}
 
-		public static TextBlock FontSize([NotNull] this TextBlock @this, double fontSize)
+		public static TextBlock FontSize(this TextBlock @this, double fontSize)
 		{
 			@this.FontSize = fontSize;
 			return @this;
 		}
 
-		public static TextBlock TextWrapping([NotNull] this TextBlock @this, TW textWrapping)
+		public static TextBlock TextWrapping(this TextBlock @this, TW textWrapping)
 		{
 			@this.TextWrapping = textWrapping;
 			return @this;
 		}
 
-		public static TextBlock WrapWithOverflow([NotNull] this TextBlock @this) =>
+		public static TextBlock WrapWithOverflow(this TextBlock @this) =>
 			@this.TextWrapping(TW.WrapWithOverflow);
 
-		public static TextBlock NoWrap([NotNull] this TextBlock @this) =>
+		public static TextBlock NoWrap(this TextBlock @this) =>
 			@this.TextWrapping(TW.NoWrap);
 
-		public static TextBlock Wrap([NotNull] this TextBlock @this) =>
+		public static TextBlock Wrap(this TextBlock @this) =>
 			@this.TextWrapping(TW.Wrap);
 
-		public static TextBlock Background([NotNull] this TextBlock @this, Brush brush)
+		public static TextBlock Background(this TextBlock @this, Brush brush)
 		{
 			@this.Background = brush;
 			return @this;
 		}
 
-		public static TextBlock Background([NotNull] this TextBlock @this, Color color)
+		public static TextBlock Background(this TextBlock @this, Color color)
 		{
 			@this.Background = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static TextBlock Background([NotNull] this TextBlock @this, byte a, byte r, byte g, byte b)
+		public static TextBlock Background(this TextBlock @this, byte a, byte r, byte g, byte b)
 		{
 			@this.Background = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static TextBlock Background([NotNull] this TextBlock @this, byte r, byte g, byte b)
+		public static TextBlock Background(this TextBlock @this, byte r, byte g, byte b)
 		{
 			@this.Background = new SolidColorBrush(Color.FromRgb(r, g, b));
 			return @this;
 		}
 
-		public static TextBlock TextDecorations([NotNull] this TextBlock @this, TextDecorationCollection textDecorations)
+		public static TextBlock TextDecorations(this TextBlock @this, TextDecorationCollection textDecorations)
 		{
 			@this.TextDecorations = textDecorations;
 			return @this;
 		}
 
-		public static TextBlock TextEffects([NotNull] this TextBlock @this, TextEffectCollection textEffects)
+		public static TextBlock TextEffects(this TextBlock @this, TextEffectCollection textEffects)
 		{
 			@this.TextEffects = textEffects;
 			return @this;
 		}
 
-		public static TextBlock LineHeight([NotNull] this TextBlock @this, double lineHeight)
+		public static TextBlock LineHeight(this TextBlock @this, double lineHeight)
 		{
 			@this.LineHeight = lineHeight;
 			return @this;
 		}
 
-		public static TextBlock LineStackingStrategy([NotNull] this TextBlock @this, LineStackingStrategy lineStackingStrategy)
+		public static TextBlock LineStackingStrategy(this TextBlock @this, LineStackingStrategy lineStackingStrategy)
 		{
 			@this.LineStackingStrategy = lineStackingStrategy;
 			return @this;
 		}
 
-		public static TextBlock Padding([NotNull] this TextBlock @this, double uniform)
+		public static TextBlock Padding(this TextBlock @this, double uniform)
 		{
 			@this.Padding = new Thickness(uniform);
 			return @this;
 		}
 
-		public static TextBlock Padding([NotNull] this TextBlock @this, double horizontal, double vertical)
+		public static TextBlock Padding(this TextBlock @this, double horizontal, double vertical)
 		{
 			@this.Padding = new Thickness(horizontal, vertical, horizontal, vertical);
 			return @this;
 		}
 
-		public static TextBlock Padding([NotNull] this TextBlock @this, double left, double top, double right, double bottom)
+		public static TextBlock Padding(this TextBlock @this, double left, double top, double right, double bottom)
 		{
 			@this.Padding = new Thickness(left, top, right, bottom);
 			return @this;
 		}
 
-		public static TextBlock PaddingHorizontal([NotNull] this TextBlock @this, double horizontal)
+		public static TextBlock PaddingHorizontal(this TextBlock @this, double horizontal)
 		{
 			var Padding = @this.Padding;
 
@@ -173,7 +172,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock PaddingVertical([NotNull] this TextBlock @this, double vertical)
+		public static TextBlock PaddingVertical(this TextBlock @this, double vertical)
 		{
 			var Padding = @this.Padding;
 
@@ -181,7 +180,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock PaddingLeft([NotNull] this TextBlock @this, double left)
+		public static TextBlock PaddingLeft(this TextBlock @this, double left)
 		{
 			var Padding = @this.Padding;
 
@@ -189,7 +188,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock PaddingTop([NotNull] this TextBlock @this, double top)
+		public static TextBlock PaddingTop(this TextBlock @this, double top)
 		{
 			var Padding = @this.Padding;
 
@@ -197,7 +196,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock PaddingRight([NotNull] this TextBlock @this, double right)
+		public static TextBlock PaddingRight(this TextBlock @this, double right)
 		{
 			var Padding = @this.Padding;
 
@@ -205,7 +204,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock PaddingBottom([NotNull] this TextBlock @this, double bottom)
+		public static TextBlock PaddingBottom(this TextBlock @this, double bottom)
 		{
 			var Padding = @this.Padding;
 
@@ -213,64 +212,64 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TextBlock TextAlignment([NotNull] this TextBlock @this, TA textAlignment)
+		public static TextBlock TextAlignment(this TextBlock @this, TA textAlignment)
 		{
 			@this.TextAlignment = textAlignment;
 			return @this;
 		}
 
-		public static TextBlock TextLeft([NotNull] this TextBlock @this) =>
+		public static TextBlock TextLeft(this TextBlock @this) =>
 			@this.TextAlignment(TA.Left);
 
-		public static TextBlock TextRight([NotNull] this TextBlock @this) =>
+		public static TextBlock TextRight(this TextBlock @this) =>
 			@this.TextAlignment(TA.Right);
 
-		public static TextBlock TextCenter([NotNull] this TextBlock @this) =>
+		public static TextBlock TextCenter(this TextBlock @this) =>
 			@this.TextAlignment(TA.Center);
 
-		public static TextBlock TextJustify([NotNull] this TextBlock @this) =>
+		public static TextBlock TextJustify(this TextBlock @this) =>
 			@this.TextAlignment(TA.Justify);
 
-		public static TextBlock TextTrimming([NotNull] this TextBlock @this, TT textTrimming)
+		public static TextBlock TextTrimming(this TextBlock @this, TT textTrimming)
 		{
 			@this.TextTrimming = textTrimming;
 			return @this;
 		}
 
-		public static TextBlock TextTrimmingNone([NotNull] this TextBlock @this) =>
+		public static TextBlock TextTrimmingNone(this TextBlock @this) =>
 			@this.TextTrimming(TT.None);
 
-		public static TextBlock TextTrimmingCharacterEllipsis([NotNull] this TextBlock @this) =>
+		public static TextBlock TextTrimmingCharacterEllipsis(this TextBlock @this) =>
 			@this.TextTrimming(TT.CharacterEllipsis);
 
-		public static TextBlock TextTrimmingWordEllipsis([NotNull] this TextBlock @this) =>
+		public static TextBlock TextTrimmingWordEllipsis(this TextBlock @this) =>
 			@this.TextTrimming(TT.WordEllipsis);
 
-		public static TextBlock IsHyphenationEnabled([NotNull] this TextBlock @this, bool isHyphenationEnabled)
+		public static TextBlock IsHyphenationEnabled(this TextBlock @this, bool isHyphenationEnabled)
 		{
 			@this.IsHyphenationEnabled = isHyphenationEnabled;
 			return @this;
 		}
 
-		public static TextBlock Foreground([NotNull] this TextBlock @this, Brush brush)
+		public static TextBlock Foreground(this TextBlock @this, Brush brush)
 		{
 			@this.Foreground = brush;
 			return @this;
 		}
 
-		public static TextBlock Foreground([NotNull] this TextBlock @this, Color color)
+		public static TextBlock Foreground(this TextBlock @this, Color color)
 		{
 			@this.Foreground = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static TextBlock Foreground([NotNull] this TextBlock @this, byte a, byte r, byte g, byte b)
+		public static TextBlock Foreground(this TextBlock @this, byte a, byte r, byte g, byte b)
 		{
 			@this.Foreground = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static TextBlock Foreground([NotNull] this TextBlock @this, byte r, byte g, byte b)
+		public static TextBlock Foreground(this TextBlock @this, byte r, byte g, byte b)
 		{
 			@this.Foreground = new SolidColorBrush(Color.FromRgb(r, g, b));
 			return @this;
