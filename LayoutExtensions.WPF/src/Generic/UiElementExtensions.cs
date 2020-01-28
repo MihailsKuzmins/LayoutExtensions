@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using V = System.Windows.Visibility;
@@ -8,39 +7,37 @@ namespace LayoutExtensions.WPF
 {
 	public static class UiElementExtensions
 	{
-		public static TUiElement Col<TUiElement>([NotNull] this TUiElement @this, int column, int colSpan = 1)
+		public static TUiElement Col<TUiElement>(this TUiElement @this, int column, int colSpan = 1)
 			where TUiElement : UIElement
 		{
 			Grid.SetColumn(@this, column);
 
-			return @this
-				.ColSpan(colSpan);
+			return @this.ColSpan(colSpan);
 		}
 
-		public static TUiElement Row<TUiElement>([NotNull] this TUiElement @this, int row, int rowSpan = 1)
+		public static TUiElement Row<TUiElement>(this TUiElement @this, int row, int rowSpan = 1)
 			where TUiElement : UIElement
 		{
 			Grid.SetRow(@this, row);
 
-			return @this
-				.RowSpan(rowSpan);
+			return @this.RowSpan(rowSpan);
 		}
 
-		public static TUiElement ColSpan<TUiElement>([NotNull] this TUiElement @this, int colSpan)
+		public static TUiElement ColSpan<TUiElement>(this TUiElement @this, int colSpan)
 			where TUiElement : UIElement
 		{
 			Grid.SetColumnSpan(@this, colSpan);
 			return @this;
 		}
 
-		public static TUiElement RowSpan<TUiElement>([NotNull] this TUiElement @this, int rowSpan)
+		public static TUiElement RowSpan<TUiElement>(this TUiElement @this, int rowSpan)
 			where TUiElement : UIElement
 		{
 			Grid.SetRowSpan(@this, rowSpan);
 			return @this;
 		}
 
-		public static TUiElement MouseBinding<TUiElement>([NotNull] this TUiElement @this, MouseAction mouseAction, out MouseBinding mouseBinding)
+		public static TUiElement MouseBinding<TUiElement>(this TUiElement @this, MouseAction mouseAction, out MouseBinding mouseBinding)
 			where TUiElement : UIElement
 		{
 			mouseBinding = new MouseBinding
@@ -52,7 +49,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TUiElement MouseBinding<TUiElement>([NotNull] this TUiElement @this, MouseAction mouseAction, ICommand command)
+		public static TUiElement MouseBinding<TUiElement>(this TUiElement @this, MouseAction mouseAction, ICommand command)
 			where TUiElement : UIElement
 		{
 			var mouseBinding = new MouseBinding
@@ -65,25 +62,25 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TUiElement Visible<TUiElement>([NotNull] this TUiElement @this)
+		public static TUiElement Visible<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
 			return @this.Visibility(V.Visible);
 		}
 
-		public static TUiElement Hidden<TUiElement>([NotNull] this TUiElement @this)
+		public static TUiElement Hidden<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
 			return @this.Visibility(V.Hidden);
 		}
 
-		public static TUiElement Collapsed<TUiElement>([NotNull] this TUiElement @this)
+		public static TUiElement Collapsed<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
 			return @this.Visibility(V.Collapsed);
 		}
 
-		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, Point point)
+		public static TUiElement RenderTransformOrigin<TUiElement>(this TUiElement @this, Point point)
 			where TUiElement : UIElement
 		{
 			@this.RenderTransformOrigin = point;
@@ -91,28 +88,28 @@ namespace LayoutExtensions.WPF
 
 		}
 
-		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, double uniform)
+		public static TUiElement RenderTransformOrigin<TUiElement>(this TUiElement @this, double uniform)
 			where TUiElement : UIElement
 		{
 			@this.RenderTransformOrigin = new Point(uniform, uniform);
 			return @this;
 		}
 
-		public static TUiElement RenderTransformOrigin<TUiElement>([NotNull] this TUiElement @this, double x, double y)
+		public static TUiElement RenderTransformOrigin<TUiElement>(this TUiElement @this, double x, double y)
 			where TUiElement : UIElement
 		{
 			@this.RenderTransformOrigin = new Point(x, y);
 			return @this;
 		}
 
-		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, KeyBinding keyBinding)
+		public static TUiElement KeyBinding<TUiElement>(this TUiElement @this, KeyBinding keyBinding)
 			where TUiElement : UIElement
 		{
 			@this.InputBindings.Add(keyBinding);
 			return @this;
 		}
 
-		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, Key key, out KeyBinding keyBinding)
+		public static TUiElement KeyBinding<TUiElement>(this TUiElement @this, Key key, out KeyBinding keyBinding)
 			where TUiElement : UIElement
 		{
 			keyBinding = new KeyBinding
@@ -124,7 +121,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, Key key, ICommand command)
+		public static TUiElement KeyBinding<TUiElement>(this TUiElement @this, Key key, ICommand command)
 			where TUiElement : UIElement
 		{
 			var keyBinding = new KeyBinding
@@ -137,7 +134,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, ModifierKeys modifier, Key key, out KeyBinding keyBinding)
+		public static TUiElement KeyBinding<TUiElement>(this TUiElement @this, ModifierKeys modifier, Key key, out KeyBinding keyBinding)
 			where TUiElement : UIElement
 		{
 			keyBinding = new KeyBinding
@@ -150,7 +147,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TUiElement KeyBinding<TUiElement>([NotNull] this TUiElement @this, ModifierKeys modifier, Key key, ICommand command)
+		public static TUiElement KeyBinding<TUiElement>(this TUiElement @this, ModifierKeys modifier, Key key, ICommand command)
 			where TUiElement : UIElement
 		{
 			var keyBinding = new KeyBinding
@@ -164,7 +161,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		private static TUiElement Visibility<TUiElement>([NotNull] this TUiElement @this, V visibility)
+		private static TUiElement Visibility<TUiElement>(this TUiElement @this, V visibility)
 			where TUiElement : UIElement
 		{
 			@this.Visibility = visibility;

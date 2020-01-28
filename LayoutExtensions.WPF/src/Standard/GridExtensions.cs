@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using LayoutExtensions.WPF.Extensions;
+﻿using LayoutExtensions.WPF.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,25 +8,25 @@ namespace LayoutExtensions.WPF
 {
 	public static class GridExtensions
 	{
-		public static Grid Rows([NotNull] this Grid @this, IEnumerable<RowDefinition> rows)
+		public static Grid Rows(this Grid @this, IEnumerable<RowDefinition> rows)
 		{
 			@this.RowDefinitions.AddRange(rows);
 			return @this;
 		}
 
-		public static Grid Cols([NotNull] this Grid @this, IEnumerable<ColumnDefinition> cols)
+		public static Grid Cols(this Grid @this, IEnumerable<ColumnDefinition> cols)
 		{
 			@this.ColumnDefinitions.AddRange(cols);
 			return @this;
 		}
 
-		public static Grid Rows([NotNull] this Grid @this, Func<IEnumerable<RowDefinition>> rowsFunc)
+		public static Grid Rows(this Grid @this, Func<IEnumerable<RowDefinition>> rowsFunc)
 		{
 			@this.RowDefinitions.AddRange(rowsFunc?.Invoke() ?? Enumerable.Empty<RowDefinition>());
 			return @this;
 		}
 
-		public static Grid Cols([NotNull] this Grid @this, Func<IEnumerable<ColumnDefinition>> colsFunc)
+		public static Grid Cols(this Grid @this, Func<IEnumerable<ColumnDefinition>> colsFunc)
 		{
 			@this.ColumnDefinitions.AddRange(colsFunc?.Invoke() ?? Enumerable.Empty<ColumnDefinition>());
 			return @this;

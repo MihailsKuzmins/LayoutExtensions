@@ -7,6 +7,7 @@
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
 		<LangVersion>preview</LangVersion>
+    <Nullable>Enable</Nullable>
     <AssemblyOriginatorKeyFile>layout.extensions.wpf.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
