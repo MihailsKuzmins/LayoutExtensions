@@ -6,7 +6,7 @@
     <Version>2.0.1</Version>
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
-		<LangVersion>preview</LangVersion>
+    <LangVersion>preview</LangVersion>
     <Nullable>Enable</Nullable>
     <AssemblyOriginatorKeyFile>layout.extensions.wpf.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
