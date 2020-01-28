@@ -41,7 +41,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		private static MenuItem CreateMenuItem(string header, ICommand command) =>
+		private static MenuItem CreateMenuItem(string header, ICommand? command) =>
 			new MenuItem
 			{
 				Header = header,
