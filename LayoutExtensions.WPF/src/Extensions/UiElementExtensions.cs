@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class UiElementExtensionsEx

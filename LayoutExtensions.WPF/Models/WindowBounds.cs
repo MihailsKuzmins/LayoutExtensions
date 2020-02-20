@@ -1,4 +1,5 @@
-﻿namespace LayoutExtensions.WPF.Models
+﻿// ReSharper disable once CheckNamespace
+namespace LayoutExtensions.WPF
 {
 	public struct WindowBounds
 	{

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace LayoutExtensions.WPF.Extensions
+// ReSharper disable once CheckNamespace
+namespace LayoutExtensions.WPF
 {
 	internal static class CollectionExtensions
 	{
