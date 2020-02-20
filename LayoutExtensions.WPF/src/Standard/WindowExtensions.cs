@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using LayoutExtensions.WPF.Models;
+using System.Windows;
 
 namespace LayoutExtensions.WPF
 {
@@ -22,6 +23,16 @@ namespace LayoutExtensions.WPF
 			@this.Top = top;
 			@this.Width = width;
 			@this.Height = height;
+
+			return @this;
+		}
+
+		public static Window Bounds(this Window @this, WindowBounds windowBounds)
+		{
+			@this.Left = windowBounds.Left;
+			@this.Top = windowBounds.Top;
+			@this.Width = windowBounds.Width;
+			@this.Height = windowBounds.Height;
 
 			return @this;
 		}
