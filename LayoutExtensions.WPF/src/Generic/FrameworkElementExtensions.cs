@@ -253,7 +253,7 @@ namespace LayoutExtensions.WPF
 				.CenterV();
 		}
 
-		public static TFrameworkElement Botton<TFrameworkElement>(this TFrameworkElement @this)
+		public static TFrameworkElement Bottom<TFrameworkElement>(this TFrameworkElement @this)
 			where TFrameworkElement : FrameworkElement
 		{
 			return @this.VerticalAlignment(V.Bottom);
