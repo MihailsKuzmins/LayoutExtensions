@@ -228,54 +228,54 @@ namespace LayoutExtensions.WPF
 		public static TControl PaddingHorizontal<TControl>(this TControl @this, double horizontal)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(horizontal, Padding.Top, horizontal, Padding.Bottom);
+			@this.Padding = new Thickness(horizontal, padding.Top, horizontal, padding.Bottom);
 			return @this;
 		}
 
 		public static TControl PaddingVertical<TControl>(this TControl @this, double vertical)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, vertical, Padding.Right, vertical);
+			@this.Padding = new Thickness(padding.Left, vertical, padding.Right, vertical);
 			return @this;
 		}
 
 		public static TControl PaddingLeft<TControl>(this TControl @this, double left)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(left, Padding.Top, Padding.Right, Padding.Bottom);
+			@this.Padding = new Thickness(left, padding.Top, padding.Right, padding.Bottom);
 			return @this;
 		}
 
 		public static TControl PaddingTop<TControl>(this TControl @this, double top)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, top, Padding.Right, Padding.Bottom);
+			@this.Padding = new Thickness(padding.Left, top, padding.Right, padding.Bottom);
 			return @this;
 		}
 
 		public static TControl PaddingRight<TControl>(this TControl @this, double right)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, Padding.Top, right, Padding.Bottom);
+			@this.Padding = new Thickness(padding.Left, padding.Top, right, padding.Bottom);
 			return @this;
 		}
 
 		public static TControl PaddingBottom<TControl>(this TControl @this, double bottom)
 			where TControl : Control
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, Padding.Top, Padding.Right, bottom);
+			@this.Padding = new Thickness(padding.Left, padding.Top, padding.Right, bottom);
 			return @this;
 		}
 
