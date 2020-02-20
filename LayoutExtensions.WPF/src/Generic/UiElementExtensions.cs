@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using V = System.Windows.Visibility;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class UiElementExtensions

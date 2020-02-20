@@ -104,6 +104,11 @@ Available extensions:
  - TextBlock - FontWeight, Bold, FontStyle, Italic, Oblique, FontFamily, Text, FontStretch, BaselineOffset, FontSize, TextWrapping, WrapWithOverflow, NoWrap, Wrap, Background, TextDecorations, TextEffects, LineHeight, LineStackingStrategy, Padding, PaddingHorizontal, PaddingVertical, PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, TextAlignment, TextLeft, TextRight, TextCenter, TextJustify, TextTrimming, TextTrimmingNone, TextTrimmingCharacterEllipsis, TextTrimmingWordEllipsis, IsHyphenationEnabled, Foreground;
 
  - Window - WindowStyle, ResizeMode, Bounds.
+
+
+ - DoubleAnimation - ToValue;
+
+ - TimelineExtensions - Duration, Forever, RepeatBehaviour, TargetProperty, AddToStoryboard.
  
 
  - String - ToImageSource.

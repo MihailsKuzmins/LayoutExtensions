@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls.Primitives;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class TextBoxBaseExtensions

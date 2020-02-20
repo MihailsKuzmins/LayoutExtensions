@@ -1,4 +1,5 @@
-﻿namespace LayoutExtensions.WPF
+﻿// ReSharper disable once CheckNamespace
+namespace LayoutExtensions.WPF
 {
 	public enum Images : byte
 	{

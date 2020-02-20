@@ -1,5 +1,4 @@
-﻿using LayoutExtensions.WPF.Extensions;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -7,6 +6,7 @@ using TA = System.Windows.TextAlignment;
 using TT = System.Windows.TextTrimming;
 using TW = System.Windows.TextWrapping;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class TextBlockExtensions
@@ -166,49 +166,49 @@ namespace LayoutExtensions.WPF
 
 		public static TextBlock PaddingHorizontal(this TextBlock @this, double horizontal)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(horizontal, Padding.Top, horizontal, Padding.Bottom);
+			@this.Padding = new Thickness(horizontal, padding.Top, horizontal, padding.Bottom);
 			return @this;
 		}
 
 		public static TextBlock PaddingVertical(this TextBlock @this, double vertical)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, vertical, Padding.Right, vertical);
+			@this.Padding = new Thickness(padding.Left, vertical, padding.Right, vertical);
 			return @this;
 		}
 
 		public static TextBlock PaddingLeft(this TextBlock @this, double left)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(left, Padding.Top, Padding.Right, Padding.Bottom);
+			@this.Padding = new Thickness(left, padding.Top, padding.Right, padding.Bottom);
 			return @this;
 		}
 
 		public static TextBlock PaddingTop(this TextBlock @this, double top)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, top, Padding.Right, Padding.Bottom);
+			@this.Padding = new Thickness(padding.Left, top, padding.Right, padding.Bottom);
 			return @this;
 		}
 
 		public static TextBlock PaddingRight(this TextBlock @this, double right)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, Padding.Top, right, Padding.Bottom);
+			@this.Padding = new Thickness(padding.Left, padding.Top, right, padding.Bottom);
 			return @this;
 		}
 
 		public static TextBlock PaddingBottom(this TextBlock @this, double bottom)
 		{
-			var Padding = @this.Padding;
+			var padding = @this.Padding;
 
-			@this.Padding = new Thickness(Padding.Left, Padding.Top, Padding.Right, bottom);
+			@this.Padding = new Thickness(padding.Left, padding.Top, padding.Right, bottom);
 			return @this;
 		}
 
