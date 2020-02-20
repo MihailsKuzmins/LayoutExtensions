@@ -1,5 +1,4 @@
-﻿using LayoutExtensions.WPF.Models;
-using System.Windows;
+﻿using System.Windows;
 
 // ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
