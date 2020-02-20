@@ -14,6 +14,13 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static TTimeline Forever<TTimeline>(this TTimeline @this)
+			where TTimeline : Timeline
+		{
+			@this.RepeatBehavior = RepeatBehavior.Forever;
+			return @this;
+		}
+
 		public static TTimeline RepeatBehaviour<TTimeline>(this TTimeline @this, RepeatBehavior repeatBehavior)
 			where TTimeline : Timeline
 		{
