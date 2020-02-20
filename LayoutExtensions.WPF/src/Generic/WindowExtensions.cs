@@ -5,19 +5,22 @@ namespace LayoutExtensions.WPF
 {
 	public static class WindowExtensions
 	{
-		public static Window WindowStyle(this Window @this, WindowStyle windowStyle)
+		public static TWindow WindowStyle<TWindow>(this TWindow @this, WindowStyle windowStyle)
+			where TWindow : Window
 		{
 			@this.WindowStyle = windowStyle;
 			return @this;
 		}
 
-		public static Window ResizeMode(this Window @this, ResizeMode resizeMode)
+		public static TWindow ResizeMode<TWindow>(this TWindow @this, ResizeMode resizeMode)
+			where TWindow : Window
 		{
 			@this.ResizeMode = resizeMode;
 			return @this;
 		}
 
-		public static Window Bounds(this Window @this, double left, double top, double width, double height)
+		public static TWindow Bounds<TWindow>(this TWindow @this, double left, double top, double width, double height)
+			where TWindow : Window
 		{
 			@this.Left = left;
 			@this.Top = top;
@@ -27,7 +30,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Window Bounds(this Window @this, WindowBounds windowBounds)
+		public static TWindow Bounds<TWindow>(this TWindow @this, WindowBounds windowBounds)
+			where TWindow : Window
 		{
 			@this.Left = windowBounds.Left;
 			@this.Top = windowBounds.Top;
