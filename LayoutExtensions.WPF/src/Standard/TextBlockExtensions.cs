@@ -7,6 +7,7 @@ using TA = System.Windows.TextAlignment;
 using TT = System.Windows.TextTrimming;
 using TW = System.Windows.TextWrapping;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class TextBlockExtensions

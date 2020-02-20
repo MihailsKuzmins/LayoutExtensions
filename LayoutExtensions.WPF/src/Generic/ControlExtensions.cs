@@ -6,6 +6,7 @@ using System.Windows.Media;
 using H = System.Windows.HorizontalAlignment;
 using V = System.Windows.VerticalAlignment;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class ControlExtensions

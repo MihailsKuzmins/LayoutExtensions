@@ -4,6 +4,7 @@ using System.Windows.Input;
 using H = System.Windows.HorizontalAlignment;
 using V = System.Windows.VerticalAlignment;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class FrameworkElementExtensions

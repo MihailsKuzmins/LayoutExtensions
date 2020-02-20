@@ -1,5 +1,6 @@
 ﻿using System.Windows.Data;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class CollectionViewSourceExtensions

@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 
+// ReSharper disable once CheckNamespace
 namespace LayoutExtensions.WPF
 {
 	public static class ContextMenuExtensions
