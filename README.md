@@ -4,60 +4,61 @@
 
 The library provides extension methods for assigning properties to FrameworkElements and Control in a fluent way. Using the library involves creating the UI in C#, not in XAML files. Currently there are only WPF extension methods.
 Example:
+```cs    
+public class MainWindow() : Window
+{
+	private readonly Label _titleLabel;
+	private readonly ItemsControl _itemsControl;
+	private readonly Button _backButton;
 
-	public class MainWindow() : Window
+	public MainWindow()
 	{
-		private readonly Label _titleLabel;
-		private readonly ItemsControl _itemsControl;
-		private readonly Button _backButton;
+		new Grid()
+		    .Rows(CreateRowDefinitions)
+		    .Cols(CreateColumnDefinitions)
+		    .Assign(out var contentGrid);
 
-		public MainWindow()
-		{
-			new Grid()
-			    .Rows(CreateRowDefinitions)
-			    .Cols(CreateColumnDefinitions)
-			    .Assign(out var contentGrid);
+		new Label()
+		    .Col(0, 2)
+		    .FontSize(25)
+		    .AddToPanel(contentGrid)
+		    .Assign(out _titleLabel);
 
-			new Label()
-			    .Col(0, 2)
-			    .FontSize(25)
-			    .AddToPanel(contentGrid)
-			    .Assign(out _titleLabel);
+		new ItemsControl()
+		    .Row(1, 2)
+		    .ItemTemplate(CreateItemTemplate())
+		    .AddToPanel(contentGrid)
+		    .Assign(out _itemsControl);
 
-			new ItemsControl()
-			    .Row(1, 2)
-			    .ItemTemplate(CreateItemTemplate())
-			    .AddToPanel(contentGrid)
-			    .Assign(out _itemsControl);
+		new Button()
+		    .Row(1, 2)
+		    .Col(1)
+		    .Content("Navigate back")
+		    .AddToPanel(contentGrid)
+		    .Assign(out _backButton);
 
-			new Button()
-			    .Row(1, 2)
-			    .Col(1)
-			    .Content("Navigate back")
-			    .AddToPanel(contentGrid)
-			    .Assign(out _backButton);
-
-			Content = contentGrid;
-		}
-
-		private static IEnumerable<RowDefinition> CreateRowDefinitions()
-		{
-			yield return new RowDefinition { Height = new GridLength(1, GridUnitType.Star) };
-			yield return new RowDefinition { Height = GridLength.Auto };
-			yield return new RowDefinition { Height = GridLength.Auto };
-		}
-
-		private static IEnumerable<ColumnDefinition> CreateColumnDefinitions()
-		{
-			yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
-			yield return new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
-		}
-
-		private static DataTemplate CreateItemTemplate() =>
-			new DataTemplate()
-			    .From(typeof(SomeExampleView))
-			    .DataType(typeof(SomeExampleViewModel));
+		Content = contentGrid;
 	}
+
+	private static IEnumerable<RowDefinition> CreateRowDefinitions()
+	{
+		yield return new RowDefinition { Height = new GridLength(1, GridUnitType.Star) };
+		yield return new RowDefinition { Height = GridLength.Auto };
+		yield return new RowDefinition { Height = GridLength.Auto };
+	}
+
+	private static IEnumerable<ColumnDefinition> CreateColumnDefinitions()
+	{
+		yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
+		yield return new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
+	}
+
+	private static DataTemplate CreateItemTemplate() =>
+		new DataTemplate()
+		    .From(typeof(SomeExampleView))
+		    .DataType(typeof(SomeExampleViewModel));
+}
+```
 
 Available extensions:
  - ButtonBaseExtensions - Command;
