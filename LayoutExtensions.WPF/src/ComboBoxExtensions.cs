@@ -5,7 +5,8 @@ namespace LayoutExtensions.WPF
 {
 	public static class ComboBoxExtensions
 	{
-		public static ComboBox Editable(this ComboBox @this)
+		public static TComboBox Editable<TComboBox>(this TComboBox @this)
+			where TComboBox : ComboBox
 		{
 			@this.IsEditable = true;
 			return @this;

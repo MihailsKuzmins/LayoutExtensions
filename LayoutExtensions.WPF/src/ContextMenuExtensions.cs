@@ -7,18 +7,21 @@ namespace LayoutExtensions.WPF
 {
 	public static class ContextMenuExtensions
 	{
-		public static void ApplyTo(this ContextMenu @this, FrameworkElement frameworkElement)
+		public static void ApplyTo<TContextMenu>(this TContextMenu @this, FrameworkElement frameworkElement)
+			where TContextMenu : ContextMenu
 		{
 			frameworkElement.ContextMenu = @this;
 		}
 
-		public static ContextMenu MenuItem(this ContextMenu @this, MenuItem menuItem)
+		public static TContextMenu MenuItem<TContextMenu>(this TContextMenu @this, MenuItem menuItem)
+			where TContextMenu : ContextMenu
 		{
 			@this.Items.Add(menuItem);
 			return @this;
 		}
 
-		public static ContextMenu MenuItem(this ContextMenu @this, string header, ICommand command)
+		public static TContextMenu MenuItem<TContextMenu>(this TContextMenu @this, string header, ICommand command)
+			where TContextMenu : ContextMenu
 		{
 			var menuItem = CreateMenuItem(header, command);
 			@this.Items.Add(menuItem);
@@ -26,7 +29,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static ContextMenu MenuItem(this ContextMenu @this, string header, ICommand command, out MenuItem menuItem)
+		public static TContextMenu MenuItem<TContextMenu>(this TContextMenu @this, string header, ICommand command, out MenuItem menuItem)
+			where TContextMenu : ContextMenu
 		{
 			menuItem = CreateMenuItem(header, command);
 			@this.Items.Add(menuItem);
@@ -34,7 +38,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static ContextMenu MenuItem(this ContextMenu @this, string header, out MenuItem menuItem)
+		public static TContextMenu MenuItem<TContextMenu>(this TContextMenu @this, string header, out MenuItem menuItem)
+			where TContextMenu : ContextMenu
 		{
 			menuItem = CreateMenuItem(header, null);
 			@this.Items.Add(menuItem);

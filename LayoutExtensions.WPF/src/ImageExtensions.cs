@@ -6,7 +6,8 @@ namespace LayoutExtensions.WPF
 {
 	public static class ImageExtensions
 	{
-		public static Image Source(this Image @this, ImageSource imageSource)
+		public static TImage Source<TImage>(this TImage @this, ImageSource imageSource)
+			where TImage : Image
 		{
 			@this.Source = imageSource;
 			return @this;
