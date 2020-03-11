@@ -115,28 +115,28 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl Border<TControl>(this TControl @this, double uniform)
+		public static TControl BorderControl<TControl>(this TControl @this, double uniform)
 			where TControl : Control
 		{
 			@this.BorderThickness = new Thickness(uniform);
 			return @this;
 		}
 
-		public static TControl Border<TControl>(this TControl @this, double horizontal, double vertical)
+		public static TControl BorderControl<TControl>(this TControl @this, double horizontal, double vertical)
 			where TControl : Control
 		{
 			@this.BorderThickness = new Thickness(horizontal, vertical, horizontal, vertical);
 			return @this;
 		}
 
-		public static TControl Border<TControl>(this TControl @this, double left, double top, double right, double bottom)
+		public static TControl BorderControl<TControl>(this TControl @this, double left, double top, double right, double bottom)
 			where TControl : Control
 		{
 			@this.BorderThickness = new Thickness(left, top, right, bottom);
 			return @this;
 		}
 
-		public static TControl BorderHorizontal<TControl>(this TControl @this, double horizontal)
+		public static TControl BorderHorizontalControl<TControl>(this TControl @this, double horizontal)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -145,7 +145,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderVertical<TControl>(this TControl @this, double vertical)
+		public static TControl BorderVerticalControl<TControl>(this TControl @this, double vertical)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -154,7 +154,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderLeft<TControl>(this TControl @this, double left)
+		public static TControl BorderLeftControl<TControl>(this TControl @this, double left)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -163,7 +163,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderTop<TControl>(this TControl @this, double top)
+		public static TControl BorderTopControl<TControl>(this TControl @this, double top)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -172,7 +172,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderRight<TControl>(this TControl @this, double right)
+		public static TControl BorderRightControl<TControl>(this TControl @this, double right)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -181,7 +181,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderBottom<TControl>(this TControl @this, double bottom)
+		public static TControl BorderBottomControl<TControl>(this TControl @this, double bottom)
 			where TControl : Control
 		{
 			var border = @this.BorderThickness;
@@ -300,28 +300,28 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TControl BorderBrush<TControl>(this TControl @this, Brush brush)
+		public static TControl BorderBrushControl<TControl>(this TControl @this, Brush brush)
 			where TControl : Control
 		{
 			@this.BorderBrush = brush;
 			return @this;
 		}
 
-		public static TControl BorderBrush<TControl>(this TControl @this, Color color)
+		public static TControl BorderBrushControl<TControl>(this TControl @this, Color color)
 			where TControl : Control
 		{
 			@this.BorderBrush = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static TControl BorderBrush<TControl>(this TControl @this, byte a, byte r, byte g, byte b)
+		public static TControl BorderBrushControl<TControl>(this TControl @this, byte a, byte r, byte g, byte b)
 			where TControl : Control
 		{
 			@this.BorderBrush = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static TControl BorderBrush<TControl>(this TControl @this, byte r, byte g, byte b)
+		public static TControl BorderBrushControl<TControl>(this TControl @this, byte r, byte g, byte b)
 			where TControl : Control
 		{
 			@this.BorderBrush = new SolidColorBrush(Color.FromRgb(r, g, b));
