@@ -14,35 +14,53 @@ public class MainWindow() : Window
 	public MainWindow()
 	{
 		new Grid()
-		    .Rows(CreateRowDefinitions)
-		    .Cols(CreateColumnDefinitions)
-		    .Assign(out var contentGrid);
+			.Rows(CreateRowDefinitions)
+			.Cols(CreateColumnDefinitions)
+			.Assign(out var contentGrid);
 
-		new Label()
-		    .Col(0, 2)
-		    .FontSize(25)
-		    .AddToPanel(contentGrid)
-		    .Assign(out _titleLabel);
+		new TextBlock()
+			.Col(0, 2)
+			.FontSize(25)
+			.AddToPanel(contentGrid)
+			.Binding(TextBlock.TextProperty, nameof(MainViewModel.SomeText))
+			.Assign(out _titleLabel);
 
 		new ItemsControl()
-		    .Row(1, 2)
-		    .ItemTemplate(CreateItemTemplate())
-		    .AddToPanel(contentGrid)
-		    .Assign(out _itemsControl);
+			.Row(1, 2)
+			.ItemTemplate(CreateItemTemplate())
+			.AddToPanel(contentGrid)
+			.Assign(out _itemsControl);
+		    
+		new TextBox()
+			.Row(1)
+			.Col(1)
+			.FontSize(20d)
+			.MarginBottom(10d)
+			.Binding(TextBox.TextProperty, nameof(MainViewModel.SomeInput), x =>
+				x.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged)
+			.AddToPanel(contentGrid)
 
 		new Button()
-		    .Row(1, 2)
-		    .Col(1)
-		    .Content("Navigate back")
-		    .AddToPanel(contentGrid)
-		    .Assign(out _backButton);
+			.Row(2)
+			.Col(1)
+			.Content("Navigate back")
+			.CommandParameter(int.MaxValue)
+			.Binding(ButtonBase.CommandProperty, nameof(MainViewModel.SomeAction))
+			.AddToPanel(contentGrid)
+			.Assign(out _backButton);
 
 		Content = contentGrid;
+	}
+	
+	public MainViewModel ViewModel
+	{
+		get => (MainViewModel) DataContext;
+		set => DataContext = value;
 	}
 
 	private static IEnumerable<RowDefinition> CreateRowDefinitions()
 	{
-		yield return new RowDefinition { Height = new GridLength(1, GridUnitType.Star) };
+		yield return new RowDefinition();
 		yield return new RowDefinition { Height = GridLength.Auto };
 		yield return new RowDefinition { Height = GridLength.Auto };
 	}
@@ -50,7 +68,7 @@ public class MainWindow() : Window
 	private static IEnumerable<ColumnDefinition> CreateColumnDefinitions()
 	{
 		yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
-		yield return new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
+		yield return new ColumnDefinition();
 	}
 
 	private static DataTemplate CreateItemTemplate() =>
