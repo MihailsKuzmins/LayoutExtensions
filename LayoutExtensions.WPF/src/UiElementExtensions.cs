@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using V = System.Windows.Visibility;
 
 // ReSharper disable once CheckNamespace
@@ -79,6 +80,13 @@ namespace LayoutExtensions.WPF
 			where TUiElement : UIElement
 		{
 			return @this.Visibility(V.Collapsed);
+		}
+
+		public static TUiElement RenderTransform<TUiElement>(this TUiElement @this, Transform transform)
+			where TUiElement : UIElement
+		{
+			@this.RenderTransform = transform;
+			return @this;
 		}
 
 		public static TUiElement RenderTransformOrigin<TUiElement>(this TUiElement @this, Point point)

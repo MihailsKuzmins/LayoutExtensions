@@ -12,5 +12,12 @@ namespace LayoutExtensions.WPF
 			@this.Command = command;
 			return @this;
 		}
+
+		public static TButtonBase CommandParameter<TButtonBase>(this TButtonBase @this, object commandParameter)
+			where TButtonBase : ButtonBase
+		{
+			@this.CommandParameter = commandParameter;
+			return @this;
+		}
 	}
 }

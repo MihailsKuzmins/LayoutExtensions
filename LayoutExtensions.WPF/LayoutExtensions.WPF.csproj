@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <Version>2.0.1</Version>
+    <Version>2.1.0</Version>
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
     <LangVersion>preview</LangVersion>
