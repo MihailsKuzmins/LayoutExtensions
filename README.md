@@ -97,7 +97,7 @@ public class MainWindow() : Window
  
  - TextBoxBase - ReadOnly, BorderBrush, Border;
 
- - Window - WindowStyle, ResizeMode, Bounds.
+ - Window - WindowStyle, ResizeMode, Bounds;
 
  - UiElement - Row, Col, ColSpan, RowSpan, MouseBinding, Visible, Hidden, Collapsed, RenderTransform, RenderTransformOrigin, KeyBinding.
  
