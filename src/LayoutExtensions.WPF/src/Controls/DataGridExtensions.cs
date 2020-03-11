@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace LayoutExtensions.WPF
+namespace LayoutExtensions.WPF.Controls
 {
 	public static class DataGridExtensions
 	{

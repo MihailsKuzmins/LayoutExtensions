@@ -1,8 +1,8 @@
 ﻿using System.Windows.Controls;
 using O = System.Windows.Controls.Orientation;
 
-// ReSharper disable once CheckNamespace
-namespace LayoutExtensions.WPF
+
+namespace LayoutExtensions.WPF.Controls
 {
 	public static class StackPanelExtensions
 	{

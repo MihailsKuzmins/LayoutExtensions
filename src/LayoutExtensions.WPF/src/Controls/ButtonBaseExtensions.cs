@@ -1,8 +1,7 @@
 ﻿using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
-// ReSharper disable once CheckNamespace
-namespace LayoutExtensions.WPF
+namespace LayoutExtensions.WPF.Controls
 {
 	public static class ButtonBaseExtensions
 	{

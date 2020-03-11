@@ -4,8 +4,7 @@ using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-// ReSharper disable once CheckNamespace
-namespace LayoutExtensions.WPF
+namespace LayoutExtensions.WPF.Miscellaneous
 {
 	public static class StringExtensions
 	{

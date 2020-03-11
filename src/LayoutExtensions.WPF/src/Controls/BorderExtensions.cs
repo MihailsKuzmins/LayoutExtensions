@@ -2,8 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-// ReSharper disable once CheckNamespace
-namespace LayoutExtensions.WPF
+namespace LayoutExtensions.WPF.Controls
 {
 	public static class BorderExtensions
 	{
