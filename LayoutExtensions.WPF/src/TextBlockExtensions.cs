@@ -110,28 +110,28 @@ namespace LayoutExtensions.WPF
 		public static TTextBlock Wrap<TTextBlock>(this TTextBlock @this) where TTextBlock : TextBlock =>
 			@this.TextWrapping(TW.Wrap);
 
-		public static TTextBlock Background<TTextBlock>(this TTextBlock @this, Brush brush)
+		public static TTextBlock BackgroundTextBlock<TTextBlock>(this TTextBlock @this, Brush brush)
 			where TTextBlock : TextBlock
 		{
 			@this.Background = brush;
 			return @this;
 		}
 
-		public static TTextBlock Background<TTextBlock>(this TTextBlock @this, Color color)
+		public static TTextBlock BackgroundTextBlock<TTextBlock>(this TTextBlock @this, Color color)
 			where TTextBlock : TextBlock
 		{
 			@this.Background = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static TTextBlock Background<TTextBlock>(this TTextBlock @this, byte a, byte r, byte g, byte b)
+		public static TTextBlock BackgroundTextBlock<TTextBlock>(this TTextBlock @this, byte a, byte r, byte g, byte b)
 			where TTextBlock : TextBlock
 		{
 			@this.Background = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static TTextBlock Background<TTextBlock>(this TTextBlock @this, byte r, byte g, byte b)
+		public static TTextBlock BackgroundTextBlock<TTextBlock>(this TTextBlock @this, byte r, byte g, byte b)
 			where TTextBlock : TextBlock
 		{
 			@this.Background = new SolidColorBrush(Color.FromRgb(r, g, b));
@@ -166,28 +166,28 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock Padding<TTextBlock>(this TTextBlock @this, double uniform)
+		public static TTextBlock PaddingTextBlock<TTextBlock>(this TTextBlock @this, double uniform)
 			where TTextBlock : TextBlock
 		{
 			@this.Padding = new Thickness(uniform);
 			return @this;
 		}
 
-		public static TTextBlock Padding<TTextBlock>(this TTextBlock @this, double horizontal, double vertical)
+		public static TTextBlock PaddingTextBlock<TTextBlock>(this TTextBlock @this, double horizontal, double vertical)
 			where TTextBlock : TextBlock
 		{
 			@this.Padding = new Thickness(horizontal, vertical, horizontal, vertical);
 			return @this;
 		}
 
-		public static TTextBlock Padding<TTextBlock>(this TTextBlock @this, double left, double top, double right, double bottom)
+		public static TTextBlock PaddingTextBlock<TTextBlock>(this TTextBlock @this, double left, double top, double right, double bottom)
 			where TTextBlock : TextBlock
 		{
 			@this.Padding = new Thickness(left, top, right, bottom);
 			return @this;
 		}
 
-		public static TTextBlock PaddingHorizontal<TTextBlock>(this TTextBlock @this, double horizontal)
+		public static TTextBlock PaddingHorizontalTextBlock<TTextBlock>(this TTextBlock @this, double horizontal)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -196,7 +196,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock PaddingVertical<TTextBlock>(this TTextBlock @this, double vertical)
+		public static TTextBlock PaddingVerticalTextBlock<TTextBlock>(this TTextBlock @this, double vertical)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -205,7 +205,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock PaddingLeft<TTextBlock>(this TTextBlock @this, double left)
+		public static TTextBlock PaddingLeftTextBlock<TTextBlock>(this TTextBlock @this, double left)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -214,7 +214,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock PaddingTop<TTextBlock>(this TTextBlock @this, double top)
+		public static TTextBlock PaddingTopTextBlock<TTextBlock>(this TTextBlock @this, double top)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -223,7 +223,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock PaddingRight<TTextBlock>(this TTextBlock @this, double right)
+		public static TTextBlock PaddingRightTextBlock<TTextBlock>(this TTextBlock @this, double right)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -232,7 +232,7 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock PaddingBottom<TTextBlock>(this TTextBlock @this, double bottom)
+		public static TTextBlock PaddingBottomTextBlock<TTextBlock>(this TTextBlock @this, double bottom)
 			where TTextBlock : TextBlock
 		{
 			var padding = @this.Padding;
@@ -283,28 +283,28 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TTextBlock Foreground<TTextBlock>(this TTextBlock @this, Brush brush)
+		public static TTextBlock ForegroundTextBlock<TTextBlock>(this TTextBlock @this, Brush brush)
 			where TTextBlock : TextBlock
 		{
 			@this.Foreground = brush;
 			return @this;
 		}
 
-		public static TTextBlock Foreground<TTextBlock>(this TTextBlock @this, Color color)
+		public static TTextBlock ForegroundTextBlock<TTextBlock>(this TTextBlock @this, Color color)
 			where TTextBlock : TextBlock
 		{
 			@this.Foreground = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static TTextBlock Foreground<TTextBlock>(this TTextBlock @this, byte a, byte r, byte g, byte b)
+		public static TTextBlock ForegroundTextBlock<TTextBlock>(this TTextBlock @this, byte a, byte r, byte g, byte b)
 			where TTextBlock : TextBlock
 		{
 			@this.Foreground = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static TTextBlock Foreground<TTextBlock>(this TTextBlock @this, byte r, byte g, byte b)
+		public static TTextBlock ForegroundTextBlock<TTextBlock>(this TTextBlock @this, byte r, byte g, byte b)
 			where TTextBlock : TextBlock
 		{
 			@this.Foreground = new SolidColorBrush(Color.FromRgb(r, g, b));

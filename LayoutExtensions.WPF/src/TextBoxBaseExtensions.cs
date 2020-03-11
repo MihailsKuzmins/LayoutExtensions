@@ -5,7 +5,7 @@ namespace LayoutExtensions.WPF
 {
 	public static class TextBoxBaseExtensions
 	{
-		public static TTextBoxBase ReadOnly<TTextBoxBase>(this TTextBoxBase @this)
+		public static TTextBoxBase ReadOnlyTextBox<TTextBoxBase>(this TTextBoxBase @this)
 			where TTextBoxBase : TextBoxBase
 		{
 			@this.IsReadOnly = true;

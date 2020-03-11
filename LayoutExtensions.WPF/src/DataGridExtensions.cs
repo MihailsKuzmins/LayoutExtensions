@@ -75,14 +75,14 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static TDataGrid ReadOnly<TDataGrid>(this TDataGrid @this)
+		public static TDataGrid ReadOnlyDataGrid<TDataGrid>(this TDataGrid @this)
 			where TDataGrid : DataGrid
 		{
 			@this.IsReadOnly = true;
 			return @this;
 		}
 
-		public static TDataGrid NotReadOnly<TDataGrid>(this TDataGrid @this)
+		public static TDataGrid NotReadOnlyDataGrid<TDataGrid>(this TDataGrid @this)
 			where TDataGrid : DataGrid
 		{
 			@this.IsReadOnly = false;
