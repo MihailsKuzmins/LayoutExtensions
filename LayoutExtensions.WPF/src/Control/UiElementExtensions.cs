@@ -170,6 +170,11 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
+		public static void SetIsVisible(this UIElement @this, bool isVisible) =>
+			@this.Visibility = isVisible
+				? V.Visible
+				: V.Collapsed;
+
 		private static TUiElement Visibility<TUiElement>(this TUiElement @this, V visibility)
 			where TUiElement : UIElement
 		{

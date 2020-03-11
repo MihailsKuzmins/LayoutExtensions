@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using H = System.Windows.HorizontalAlignment;
 using V = System.Windows.VerticalAlignment;
@@ -310,6 +312,23 @@ namespace LayoutExtensions.WPF
 			where TFrameworkElement : FrameworkElement
 		{
 			@this.VerticalAlignment = verticalAlignment;
+			return @this;
+		}
+
+		public static TFrameworkElement Binding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.SetBinding(dp, path);
+			return @this;
+		}
+
+		public static TFrameworkElement Binding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, string path, Action<Binding> applyFunc)
+			where TFrameworkElement : FrameworkElement
+		{
+			var binding = new Binding(path);
+			applyFunc(binding);
+
+			@this.SetBinding(dp, binding);
 			return @this;
 		}
 	}
