@@ -7,55 +7,64 @@ namespace LayoutExtensions.WPF
 {
 	public static class BorderExtensions
 	{
-		public static Border BorderBrush(this Border @this, Brush brush)
+		public static TBorder BorderBrush<TBorder>(this TBorder @this, Brush brush)
+			where TBorder : Border
 		{
 			@this.BorderBrush = brush;
 			return @this;
 		}
 
-		public static Border BorderBrush(this Border @this, Color color)
+		public static TBorder BorderBrush<TBorder>(this TBorder @this, Color color)
+			where TBorder : Border
 		{
 			@this.BorderBrush = new SolidColorBrush(color);
 			return @this;
 		}
 
-		public static Border BorderBrush(this Border @this, byte a, byte r, byte g, byte b)
+		public static TBorder BorderBrush<TBorder>(this TBorder @this, byte a, byte r, byte g, byte b)
+			where TBorder : Border
 		{
 			@this.BorderBrush = new SolidColorBrush(Color.FromArgb(a, r, g, b));
 			return @this;
 		}
 
-		public static Border BorderBrush(this Border @this, byte r, byte g, byte b)
+		public static TBorder BorderBrush<TBorder>(this TBorder @this, byte r, byte g, byte b)
+			where TBorder : Border
 		{
 			@this.BorderBrush = new SolidColorBrush(Color.FromRgb(r, g, b));
 			return @this;
 		}
 
-		public static Border Border(this Border @this, Thickness border)
+		public static TBorder Border<TBorder>(this TBorder @this, Thickness border)
+			where TBorder : Border
 		{
 			@this.BorderThickness = border;
 			return @this;
 		}
 
-		public static Border Border(this Border @this, double uniform)
+		public static TBorder Border<TBorder>(this TBorder @this, double uniform)
+			where TBorder : Border
 		{
 			@this.BorderThickness = new Thickness(uniform);
 			return @this;
 		}
 
-		public static Border Border(this Border @this, double horizontal, double vertical)
+		public static TBorder Border<TBorder>(this TBorder @this, double horizontal, double vertical)
+			where TBorder : Border
 		{
 			@this.BorderThickness = new Thickness(horizontal, vertical, horizontal, vertical);
 			return @this;
 		}
 
-		public static Border Border(this Border @this, double left, double top, double right, double bottom)
+		public static TBorder Border<TBorder>(this TBorder @this, double left, double top, double right, double bottom)
+			where TBorder : Border
 		{
 			@this.BorderThickness = new Thickness(left, top, right, bottom);
 			return @this;
 		}
 
-		public static Border BorderHorizontal(this Border @this, double horizontal)
+		public static TBorder BorderHorizontal<TBorder>(this TBorder @this, double horizontal)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -63,7 +72,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border BorderVertical(this Border @this, double vertical)
+		public static TBorder BorderVertical<TBorder>(this TBorder @this, double vertical)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -71,7 +81,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border BorderLeft(this Border @this, double left)
+		public static TBorder BorderLeft<TBorder>(this TBorder @this, double left)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -79,7 +90,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border BorderTop(this Border @this, double top)
+		public static TBorder BorderTop<TBorder>(this TBorder @this, double top)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -87,7 +99,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border BorderRight(this Border @this, double right)
+		public static TBorder BorderRight<TBorder>(this TBorder @this, double right)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -95,7 +108,8 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border BorderBottom(this Border @this, double bottom)
+		public static TBorder BorderBottom<TBorder>(this TBorder @this, double bottom)
+			where TBorder : Border
 		{
 			var border = @this.BorderThickness;
 
@@ -103,13 +117,15 @@ namespace LayoutExtensions.WPF
 			return @this;
 		}
 
-		public static Border CornerRadius(this Border @this, CornerRadius cornerRadius)
+		public static TBorder CornerRadius<TBorder>(this TBorder @this, CornerRadius cornerRadius)
+			where TBorder : Border
 		{
 			@this.CornerRadius = cornerRadius;
 			return @this;
 		}
 
-		public static Border CornerRadius(this Border @this, double uniform)
+		public static TBorder CornerRadius<TBorder>(this TBorder @this, double uniform)
+			where TBorder : Border
 		{
 			@this.CornerRadius = new CornerRadius(uniform);
 			return @this;
