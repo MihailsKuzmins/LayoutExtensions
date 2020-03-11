@@ -20,7 +20,7 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="..\LayoutEx.png" target="images\"/>
+		<file src="..\..\LayoutEx.png" target="images\"/>
 		<file src="bin\Release\net45\LayoutExtensions.WPF.dll" target="lib\net45\LayoutExtensions.WPF.dll"/>
 		<file src="bin\Release\netcoreapp3.0\LayoutExtensions.WPF.dll" target="lib\netcoreapp3.0\LayoutExtensions.WPF.dll"/>
 	</files>
