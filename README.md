@@ -20,7 +20,7 @@ public class MainWindow() : Window
 
 		new TextBlock()
 			.Col(0, 2)
-			.FontSize(25)
+			.FontSize(25d)
 			.AddToPanel(contentGrid)
 			.Binding(TextBlock.TextProperty, nameof(MainViewModel.SomeText))
 			.Assign(out _titleLabel);
