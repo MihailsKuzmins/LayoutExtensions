@@ -129,5 +129,33 @@ namespace LayoutExtensions.WPF.Controls
 			@this.CornerRadius = new CornerRadius(uniform);
 			return @this;
 		}
+
+		public static TBorder BackgroundBorder<TBorder>(this TBorder @this, Brush brush)
+			where TBorder : Border
+		{
+			@this.Background = brush;
+			return @this;
+		}
+
+		public static TBorder BackgroundBorder<TBorder>(this TBorder @this, Color color)
+			where TBorder : Border
+		{
+			@this.Background = new SolidColorBrush(color);
+			return @this;
+		}
+
+		public static TBorder BackgroundBorder<TBorder>(this TBorder @this, byte a, byte r, byte g, byte b)
+			where TBorder : Border
+		{
+			@this.Background = new SolidColorBrush(Color.FromArgb(a, r, g, b));
+			return @this;
+		}
+
+		public static TBorder BackgroundBorder<TBorder>(this TBorder @this, byte r, byte g, byte b)
+			where TBorder : Border
+		{
+			@this.Background = new SolidColorBrush(Color.FromRgb(r, g, b));
+			return @this;
+		}
 	}
 }

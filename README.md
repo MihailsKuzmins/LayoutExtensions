@@ -83,7 +83,7 @@ public class MainWindow() : Window
  - **Timeline** - AddToStoryboard, Duration, Forever, RepeatBehaviour, TargetProperty.
 
 ### Controls extensions:
- - **Border** - Border, BorderBottom, BorderBrush, BorderHorizontal, BorderLeft, BorderRight, BorderTop, BorderVertical, CornerRadius;
+ - **Border** - BackgroundBorder, Border, BorderBottom, BorderBrush, BorderHorizontal, BorderLeft, BorderRight, BorderTop, BorderVertical, CornerRadius;
  - **ButtonBase** - Command, CommandParameter;
  - **ComboBox** - Editable;
  - **ContentControl** - Content, ContentStringFormat, ContentTemplate, ContentTemplateSelector;
