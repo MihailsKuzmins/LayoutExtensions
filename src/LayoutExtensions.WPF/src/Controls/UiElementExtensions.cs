@@ -199,6 +199,15 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static Viewbox ToViewBox<TUiElement>(this TUiElement @this)
+			where TUiElement : UIElement
+		{
+			return new Viewbox
+			{
+				Child = @this
+			};
+		}
+
 		public static void SetIsVisible(this UIElement @this, bool isVisible) =>
 			@this.Visibility = isVisible
 				? V.Visible
