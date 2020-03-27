@@ -331,5 +331,16 @@ namespace LayoutExtensions.WPF.Controls
 			@this.SetBinding(dp, binding);
 			return @this;
 		}
+
+		public static TFrameworkElement MultiBinding<TFrameworkElement>(this TFrameworkElement @this, DependencyProperty dp, Action<MultiBinding> applyFunc, params BindingBase[] bindings)
+			where TFrameworkElement : FrameworkElement
+		{
+			var multiBinding = new MultiBinding();
+			multiBinding.Bindings.AddRange(bindings);
+			applyFunc(multiBinding);
+
+			@this.SetBinding(dp, multiBinding);
+			return @this;
+		}
 	}
 }

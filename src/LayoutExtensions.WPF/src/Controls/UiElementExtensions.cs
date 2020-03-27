@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -59,6 +60,34 @@ namespace LayoutExtensions.WPF.Controls
 				MouseAction = mouseAction,
 				Command = command
 			};
+
+			@this.InputBindings.Add(mouseBinding);
+			return @this;
+		}
+
+		public static TUiElement MouseBinding<TUiElement>(this TUiElement @this, MouseAction mouseAction, ICommand command, object commandParameter)
+			where TUiElement : UIElement
+		{
+			var mouseBinding = new MouseBinding
+			{
+				MouseAction = mouseAction,
+				Command = command,
+				CommandParameter = commandParameter
+			};
+
+			@this.InputBindings.Add(mouseBinding);
+			return @this;
+		}
+
+		public static TUiElement MouseBinding<TUiElement>(this TUiElement @this, MouseAction mouseAction, Action<MouseBinding> applyFunc)
+			where TUiElement : UIElement
+		{
+			var mouseBinding = new MouseBinding
+			{
+				MouseAction = mouseAction
+			};
+
+			applyFunc(mouseBinding);
 
 			@this.InputBindings.Add(mouseBinding);
 			return @this;
@@ -168,6 +197,15 @@ namespace LayoutExtensions.WPF.Controls
 
 			@this.InputBindings.Add(keyBinding);
 			return @this;
+		}
+
+		public static Viewbox ToViewBox<TUiElement>(this TUiElement @this)
+			where TUiElement : UIElement
+		{
+			return new Viewbox
+			{
+				Child = @this
+			};
 		}
 
 		public static void SetIsVisible(this UIElement @this, bool isVisible) =>
