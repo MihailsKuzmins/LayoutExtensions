@@ -13,43 +13,55 @@ public class MainWindow() : Window
 
 	public MainWindow()
 	{
-		new Grid()
-			.Rows(CreateRowDefinitions)
-			.Cols(CreateColumnDefinitions)
-			.Assign(out var contentGrid);
+		Content = new Grid()
+			.Rows(CreateRows)
+			.Cols(CreateCols)
+			.Children(
+				new TextBlock()
+					.Col(0, 2)
+					.FontSize(25d)
+					.Binding(TextBlock.TextProperty, nameof(MainViewModel.SomeText))
+					.Assign(out _titleLabel),
 
-		new TextBlock()
-			.Col(0, 2)
-			.FontSize(25d)
-			.AddToPanel(contentGrid)
-			.Binding(TextBlock.TextProperty, nameof(MainViewModel.SomeText))
-			.Assign(out _titleLabel);
+				new ItemsControl()
+					.Row(1, 2)
+					.ItemTemplate(CreateItemTemplate())
+					.Assign(out _itemsControl),
 
-		new ItemsControl()
-			.Row(1, 2)
-			.ItemTemplate(CreateItemTemplate())
-			.AddToPanel(contentGrid)
-			.Assign(out _itemsControl);
-		    
-		new TextBox()
-			.Row(1)
-			.Col(1)
-			.FontSize(20d)
-			.MarginBottom(10d)
-			.Binding(TextBox.TextProperty, nameof(MainViewModel.SomeInput), x =>
-				x.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged)
-			.AddToPanel(contentGrid)
+				new TextBox()
+					.Row(1)
+					.Col(1)
+					.FontSize(20d)
+					.MarginBottom(10d)
+					.Binding(TextBox.TextProperty, nameof(MainViewModel.SomeInput), x =>
+						x.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged),
 
-		new Button()
-			.Row(2)
-			.Col(1)
-			.Content("Navigate back")
-			.CommandParameter(int.MaxValue)
-			.Binding(ButtonBase.CommandProperty, nameof(MainViewModel.SomeAction))
-			.AddToPanel(contentGrid)
-			.Assign(out _backButton);
+				new Button()
+					.Row(2)
+					.Col(1)
+					.Content("Navigate back")
+					.CommandParameter(int.MaxValue)
+					.Binding(ButtonBase.CommandProperty, nameof(MainViewModel.SomeAction))
+					.AddToPanel(contentGrid)
+					.Assign(out _backButton)
+			)
 
-		Content = contentGrid;
+		static IEnumerable<RowDefinition> CreateRows()
+		{
+			yield return new RowDefinition();
+			yield return new RowDefinition { Height = GridLength.Auto };
+			yield return new RowDefinition { Height = GridLength.Auto };
+		}
+
+		static IEnumerable<ColumnDefinition> CreateCols()
+		{
+			yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
+			yield return new ColumnDefinition();
+		}
+
+		static DataTemplate CreateItemTemplate() =>
+			new DataTemplate(typeof(SomeExampleViewModel))
+				.From(typeof(SomeExampleView));
 	}
 	
 	public MainViewModel ViewModel
@@ -57,24 +69,6 @@ public class MainWindow() : Window
 		get => (MainViewModel) DataContext;
 		set => DataContext = value;
 	}
-
-	private static IEnumerable<RowDefinition> CreateRowDefinitions()
-	{
-		yield return new RowDefinition();
-		yield return new RowDefinition { Height = GridLength.Auto };
-		yield return new RowDefinition { Height = GridLength.Auto };
-	}
-
-	private static IEnumerable<ColumnDefinition> CreateColumnDefinitions()
-	{
-		yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
-		yield return new ColumnDefinition();
-	}
-
-	private static DataTemplate CreateItemTemplate() =>
-		new DataTemplate()
-		    .From(typeof(SomeExampleView))
-		    .DataType(typeof(SomeExampleViewModel));
 }
 ```
 
