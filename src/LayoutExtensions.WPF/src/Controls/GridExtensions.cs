@@ -14,13 +14,6 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
-		public static TGrid Cols<TGrid>(this TGrid @this, IEnumerable<ColumnDefinition> cols)
-			where TGrid : Grid
-		{
-			@this.ColumnDefinitions.AddRange(cols);
-			return @this;
-		}
-
 		public static TGrid Rows<TGrid>(this TGrid @this, Func<IEnumerable<RowDefinition>> rowsFunc)
 			where TGrid : Grid
 		{
@@ -28,10 +21,35 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TGrid Rows<TGrid>(this TGrid @this, params RowDefinition[] rows)
+			where TGrid : Grid
+		{
+			for (var i = 0; i < rows.Length; i++)
+				@this.RowDefinitions.Add(rows[i]);
+
+			return @this;
+		}
+
+		public static TGrid Cols<TGrid>(this TGrid @this, IEnumerable<ColumnDefinition> cols)
+			where TGrid : Grid
+		{
+			@this.ColumnDefinitions.AddRange(cols);
+			return @this;
+		}
+
 		public static TGrid Cols<TGrid>(this TGrid @this, Func<IEnumerable<ColumnDefinition>> colsFunc)
 			where TGrid : Grid
 		{
 			@this.ColumnDefinitions.AddRange(colsFunc?.Invoke() ?? Enumerable.Empty<ColumnDefinition>());
+			return @this;
+		}
+
+		public static TGrid Cols<TGrid>(this TGrid @this, params ColumnDefinition[] cols)
+			where TGrid : Grid
+		{
+			for (var i = 0; i < cols.Length; i++)
+				@this.ColumnDefinitions.Add(cols[i]);
+
 			return @this;
 		}
 	}
