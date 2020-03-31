@@ -199,6 +199,13 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TUiElement Opacity<TUiElement>(this TUiElement @this, double opacity)
+			where TUiElement : UIElement
+		{
+			@this.Opacity = opacity;
+			return @this;
+		}
+
 		public static Viewbox ToViewBox<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
