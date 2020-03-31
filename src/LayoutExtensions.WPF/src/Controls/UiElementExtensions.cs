@@ -206,6 +206,13 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TUiElement IsEnabled<TUiElement>(this TUiElement @this, bool isEnabled)
+			where TUiElement : UIElement
+		{
+			@this.IsEnabled = isEnabled;
+			return @this;
+		}
+
 		public static Viewbox ToViewBox<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
