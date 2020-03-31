@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace LayoutExtensions.WPF.Controls
@@ -27,6 +28,13 @@ namespace LayoutExtensions.WPF.Controls
 			where TItemsControl : ItemsControl
 		{
 			@this.ItemTemplate = itemTemplate;
+			return @this;
+		}
+
+		public static TItemsControl ItemTemplate<TItemsControl>(this TItemsControl @this, Func<DataTemplate> itemTemplateFunc)
+			where TItemsControl : ItemsControl
+		{
+			@this.ItemTemplate = itemTemplateFunc();
 			return @this;
 		}
 
