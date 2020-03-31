@@ -53,6 +53,13 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TFrameworkElement Size<TFrameworkElement>(this TFrameworkElement @this, double size)
+			where TFrameworkElement : FrameworkElement
+		{
+			@this.Width = @this.Height = size;
+			return @this;
+		}
+
 		public static TFrameworkElement Tag<TFrameworkElement>(this TFrameworkElement @this, object tag)
 			where TFrameworkElement : FrameworkElement
 		{
