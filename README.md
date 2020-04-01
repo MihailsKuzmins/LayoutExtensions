@@ -5,7 +5,7 @@
 The library provides extension methods for assigning properties to FrameworkElements and Control in a fluent way. Using the library involves creating the UI in C#, not in XAML files. Currently there are only WPF extension methods.
 Example:
 ```cs    
-public class MainWindow() : Window
+public class MainWindow : Window
 {
 	private readonly Label _titleLabel;
 	private readonly ItemsControl _itemsControl;
@@ -13,10 +13,21 @@ public class MainWindow() : Window
 
 	public MainWindow()
 	{
-		Content = new Grid()
-			.Rows(CreateRows)
-			.Cols(CreateCols)
-			.Children(
+		Content = new Grid
+		{
+			RowDefinitions =
+			{
+				new RowDefinition(),
+				new RowDefinition().Auto(),
+				new RowDefinition().Star(2d)
+			},
+			ColumnDefinitions =
+			{
+				new ColumnDefinition().Pixel(200d),
+				new ColumnDefinition()
+			},
+			Children =
+			{
 				new TextBlock()
 					.Col(0, 2)
 					.FontSize(25d)
@@ -44,21 +55,9 @@ public class MainWindow() : Window
 					.Binding(ButtonBase.CommandProperty, nameof(MainViewModel.SomeAction))
 					.AddToPanel(contentGrid)
 					.Assign(out _backButton)
-			)
-
-		static IEnumerable<RowDefinition> CreateRows()
-		{
-			yield return new RowDefinition();
-			yield return new RowDefinition { Height = GridLength.Auto };
-			yield return new RowDefinition { Height = GridLength.Auto };
-		}
-
-		static IEnumerable<ColumnDefinition> CreateCols()
-		{
-			yield return new ColumnDefinition { Width = new GridLength(200, GridUnitType.Pixel) };
-			yield return new ColumnDefinition();
-		}
-
+			}
+		};
+	
 		static DataTemplate CreateItemTemplate() =>
 			new DataTemplate(typeof(SomeExampleViewModel))
 				.From(typeof(SomeExampleView));
@@ -79,6 +78,7 @@ public class MainWindow() : Window
 ### Controls extensions:
  - **Border** - BackgroundBorder, Border, BorderBottom, BorderBrush, BorderHorizontal, BorderLeft, BorderRight, BorderTop, BorderVertical, CornerRadius;
  - **ButtonBase** - Command, CommandParameter;
+ - **ColumnDefinition** - Auto, Pixel, Star;
  - **ComboBox** - Editable;
  - **ContentControl** - Content, ContentStringFormat, ContentTemplate, ContentTemplateSelector;
  - **ContextMenu** - ApplyTo, MenuItem;
@@ -91,6 +91,7 @@ public class MainWindow() : Window
  - **Image** - Source;
  - **ItemsControl** - DisplayMemberPath, GroupStyle, ItemContainerStyle, ItemsPanel, ItemTemplate;
  - **Panel** - BackgroundPanel, Children;
+ - **RowDefinition** - Auto, Pixel, Star;
  - **ScrollViewer** - ScrollBarAuto, ScrollBarAutoH, ScrollBarAutoV, ScrollBarDisabled, ScrollBarDisabledH, ScrollBarDisabledV, ScrollBarHidden, ScrollBarHiddenH, ScrollBarHiddenV, ScrollBarVisible, ScrollBarVisibleH, ScrollBarVisibleV;
  - **StackPanel** - Horizontal, Vertical;
  - **TextBlock** - BackgroundTextBlock, BaselineOffset, Bold, FontFamily, FontSize, FontStyle, FontStretch, FontWeight, ForegroundTextBlock, IsHyphenationEnabled, Italic, LineHeight, LineStackingStrategy, NoWrap, Oblique, PaddingBottomTextBlock, PaddingHorizontalTextBlock, PaddingLeftTextBlock, PaddingRightTextBlock, PaddingTextBlock, PaddingTopTextBlock, PaddingVerticalTextBlock, Text, TextAlignment, TextCenter, TextDecorations, TextEffects, TextJustify, TextLeft, TextRight, TextTrimming, TextTrimmingCharacterEllipsis, TextTrimmingNone, TextTrimmingWordEllipsis, TextWrapping, Wrap, WrapWithOverflow;
