@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -11,6 +12,15 @@ namespace LayoutExtensions.WPF.Controls
 		{
 			for (var i = 0; i < uiElements.Length; i++)
 				@this.Children.Add(uiElements[i]);
+
+			return @this;
+		}
+
+		public static TPanel Children<TPanel>(this TPanel @this, IEnumerable<UIElement> uiElements)
+			where TPanel : Panel
+		{
+			foreach (var uiElement in uiElements)
+				@this.Children.Add(uiElement);
 
 			return @this;
 		}
