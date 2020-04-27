@@ -213,6 +213,20 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TUiElement Focusable<TUiElement>(this TUiElement @this)
+			where TUiElement : UIElement
+		{
+			@this.Focusable = true;
+			return @this;
+		}
+
+		public static TUiElement NotFocusable<TUiElement>(this TUiElement @this)
+			where TUiElement : UIElement
+		{
+			@this.Focusable = false;
+			return @this;
+		}
+
 		public static Viewbox ToViewBox<TUiElement>(this TUiElement @this)
 			where TUiElement : UIElement
 		{
