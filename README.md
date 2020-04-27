@@ -78,7 +78,6 @@ public class MainWindow : Window
 ### Controls extensions:
  - **Border** - BackgroundBorder, Border, BorderBottom, BorderBrush, BorderHorizontal, BorderLeft, BorderPadding, BorderPaddingBottom, BorderPaddingHorizontal, BorderPaddingLeft, BorderPaddingRight, BorderPaddingTop, BorderPaddingVertical, BorderRight, BorderTop, BorderVertical, CornerRadius;
  - **ButtonBase** - Command, CommandParameter;
- - **Canvas** - Background;
  - **ColumnDefinition** - Auto, Pixel, Star;
  - **ComboBox** - Editable;
  - **ContentControl** - Content, ContentStringFormat, ContentTemplate, ContentTemplateSelector;
