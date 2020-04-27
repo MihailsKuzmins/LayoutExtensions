@@ -116,5 +116,12 @@ namespace LayoutExtensions.WPF.Controls
 			@this.RowBackground = new SolidColorBrush(Color.FromRgb(r, g, b));
 			return @this;
 		}
+
+		public static TDataGrid SelectionUnit<TDataGrid>(this TDataGrid @this, DataGridSelectionUnit selectionUnit)
+			where TDataGrid : DataGrid
+		{
+			@this.SelectionUnit = selectionUnit;
+			return @this;
+		}
 	}
 }
