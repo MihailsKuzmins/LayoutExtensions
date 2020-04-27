@@ -10,7 +10,7 @@ namespace LayoutExtensions.WPF.Miscellaneous
 		public static ResourceDictionary Source(this ResourceDictionary @this, string resourceName, Assembly assembly, params string[] pathSegments)
 		{
 			var resourcePath = Path.Combine(pathSegments);
-			@this.Source = new Uri($"/{assembly.FullName};component/{resourcePath}/{resourceName}.xaml");
+			@this.Source = new Uri($"/{assembly.FullName};component/{resourcePath}/{resourceName}.xaml", UriKind.RelativeOrAbsolute);
 
 			return @this;
 		}
