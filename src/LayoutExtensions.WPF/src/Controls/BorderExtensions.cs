@@ -157,5 +157,80 @@ namespace LayoutExtensions.WPF.Controls
 			@this.Background = new SolidColorBrush(Color.FromRgb(r, g, b));
 			return @this;
 		}
+
+		public static TControl BorderPadding<TControl>(this TControl @this, double uniform)
+			where TControl : Control
+		{
+			@this.Padding = new Thickness(uniform);
+			return @this;
+		}
+
+		public static TControl BorderPadding<TControl>(this TControl @this, double horizontal, double vertical)
+			where TControl : Control
+		{
+			@this.Padding = new Thickness(horizontal, vertical, horizontal, vertical);
+			return @this;
+		}
+
+		public static TControl BorderPadding<TControl>(this TControl @this, double left, double top, double right, double bottom)
+			where TControl : Control
+		{
+			@this.Padding = new Thickness(left, top, right, bottom);
+			return @this;
+		}
+
+		public static TControl BorderPaddingHorizontal<TControl>(this TControl @this, double horizontal)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(horizontal, padding.Top, horizontal, padding.Bottom);
+			return @this;
+		}
+
+		public static TControl BorderPaddingVertical<TControl>(this TControl @this, double vertical)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(padding.Left, vertical, padding.Right, vertical);
+			return @this;
+		}
+
+		public static TControl BorderPaddingLeft<TControl>(this TControl @this, double left)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(left, padding.Top, padding.Right, padding.Bottom);
+			return @this;
+		}
+
+		public static TControl BorderPaddingTop<TControl>(this TControl @this, double top)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(padding.Left, top, padding.Right, padding.Bottom);
+			return @this;
+		}
+
+		public static TControl BorderPaddingRight<TControl>(this TControl @this, double right)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(padding.Left, padding.Top, right, padding.Bottom);
+			return @this;
+		}
+
+		public static TControl BorderPaddingBottom<TControl>(this TControl @this, double bottom)
+			where TControl : Control
+		{
+			var padding = @this.Padding;
+
+			@this.Padding = new Thickness(padding.Left, padding.Top, padding.Right, bottom);
+			return @this;
+		}
 	}
 }
