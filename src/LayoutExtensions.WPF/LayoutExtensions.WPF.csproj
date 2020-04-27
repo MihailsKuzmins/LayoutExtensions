@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <Version>2.1.5</Version>
+    <Version>2.1.6</Version>
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
     <LangVersion>preview</LangVersion>
     <Nullable>Enable</Nullable>
     <AssemblyOriginatorKeyFile>layout.extensions.wpf.pfx</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>2.1.5.0</AssemblyVersion>
-    <FileVersion>2.1.5.0</FileVersion>
+    <AssemblyVersion>2.1.6.0</AssemblyVersion>
+    <FileVersion>2.1.6.0</FileVersion>
     <Copyright>Copyright © MihailsKuzmins 2020</Copyright>
   </PropertyGroup>
 
