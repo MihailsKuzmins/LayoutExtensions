@@ -19,6 +19,13 @@ namespace LayoutExtensions.WPF.Controls
 			return @this;
 		}
 
+		public static TDataGrid ExpandLastCol<TDataGrid>(this TDataGrid @this)
+			where TDataGrid : DataGrid
+		{
+			@this.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+			return @this;
+		}
+
 		public static TDataGrid ColumnsCannotResize<TDataGrid>(this TDataGrid @this)
 			where TDataGrid : DataGrid
 		{
@@ -114,6 +121,13 @@ namespace LayoutExtensions.WPF.Controls
 			where TDataGrid : DataGrid
 		{
 			@this.RowBackground = new SolidColorBrush(Color.FromRgb(r, g, b));
+			return @this;
+		}
+
+		public static TDataGrid SelectionUnit<TDataGrid>(this TDataGrid @this, DataGridSelectionUnit selectionUnit)
+			where TDataGrid : DataGrid
+		{
+			@this.SelectionUnit = selectionUnit;
 			return @this;
 		}
 	}
