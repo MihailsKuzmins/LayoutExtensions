@@ -19,11 +19,10 @@ namespace LayoutExtensions.WPF.Miscellaneous
 
 		private static ImageSource GetImageSource(string fileName, string extension, Assembly assembly, params string[] pathSegments)
 		{
-			var assemblyName = assembly.FullName;
 			var resourcePath = Path.Combine(pathSegments);
 
 			return new BitmapImage(
-				new Uri($"pack://application:,,,/{assemblyName};component/{resourcePath}/{fileName}.{extension}"));
+				new Uri($"pack://application:,,,/{assembly.FullName};component/{resourcePath}/{fileName}.{extension}"));
 		}
 	}
 }
