@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace LayoutExtensions.WPF.Templates
@@ -92,6 +90,46 @@ namespace LayoutExtensions.WPF.Templates
 			return @this
 				.Value(FrameworkElement.HorizontalAlignmentProperty, HorizontalAlignment.Center)
 				.Value(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
+		}
+
+		public static TemplateCreator<T> CenterV<T>(this TemplateCreator<T> @this)
+			where T : FrameworkElement
+		{
+			return @this.Value(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
+		}
+
+		public static TemplateCreator<T> Opacity<T>(this TemplateCreator<T> @this, double opacity)
+			where T : FrameworkElement
+		{
+			return @this.Value(UIElement.OpacityProperty, opacity);
+		}
+
+		public static TemplateCreator<T> Row<T>(this TemplateCreator<T> @this, int row, int rowSpan = 1)
+			where T : FrameworkElement
+		{
+			return @this
+				.Value(Grid.RowProperty, row)
+				.Value(Grid.RowSpanProperty, rowSpan);
+		}
+
+		public static TemplateCreator<T> Col<T>(this TemplateCreator<T> @this, int col, int colSpan = 1)
+			where T : FrameworkElement
+		{
+			return @this
+				.Value(Grid.ColumnProperty, col)
+				.Value(Grid.ColumnSpanProperty, colSpan);
+		}
+
+		public static TemplateCreator<T> RowSpan<T>(this TemplateCreator<T> @this, int rowSpan)
+			where T : FrameworkElement
+		{
+			return @this.Value(Grid.RowSpanProperty, rowSpan);
+		}
+
+		public static TemplateCreator<T> ColSpan<T>(this TemplateCreator<T> @this, int colSpan)
+			where T : FrameworkElement
+		{
+			return @this.Value(Grid.ColumnSpanProperty, colSpan);
 		}
 	}
 }
