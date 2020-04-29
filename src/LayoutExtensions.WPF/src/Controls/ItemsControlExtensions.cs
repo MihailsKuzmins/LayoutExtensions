@@ -6,7 +6,7 @@ namespace LayoutExtensions.WPF.Controls
 {
 	public static class ItemsControlExtensions
 	{
-		public static void GroupStyle<TItemsControl>(this TItemsControl @this, DataTemplate headerTemplate)
+		public static TItemsControl GroupStyle<TItemsControl>(this TItemsControl @this, DataTemplate headerTemplate)
 			where TItemsControl : ItemsControl
 		{
 			var groupStyle = new GroupStyle
@@ -15,6 +15,19 @@ namespace LayoutExtensions.WPF.Controls
 			};
 
 			@this.GroupStyle.Add(groupStyle);
+			return @this;
+		}
+
+		public static TItemsControl GroupStyle<TItemsControl>(this TItemsControl @this, Func<DataTemplate> headerTemplateFunc)
+			where TItemsControl : ItemsControl
+		{
+			var groupStyle = new GroupStyle
+			{
+				HeaderTemplate = headerTemplateFunc()
+			};
+
+			@this.GroupStyle.Add(groupStyle);
+			return @this;
 		}
 
 		public static TItemsControl ItemsPanel<TItemsControl>(this TItemsControl @this, ItemsPanelTemplate itemsPanel)
