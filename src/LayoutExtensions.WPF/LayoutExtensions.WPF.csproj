@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net40;net45;netcoreapp3.0</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <Version>2.1.9.1</Version>
+    <Version>2.2.0</Version>
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
     <LangVersion>preview</LangVersion>
@@ -18,7 +18,7 @@
   <ItemGroup>
     <None Include="..\..\LayoutEx.png">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
+      <PackagePath />
     </None>
   </ItemGroup>
 
