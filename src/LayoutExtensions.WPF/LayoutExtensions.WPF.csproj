@@ -8,10 +8,11 @@
     <SignAssembly>true</SignAssembly>
     <LangVersion>preview</LangVersion>
     <Nullable>Enable</Nullable>
-    <AssemblyOriginatorKeyFile>layout.extensions.wpf.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>dev.pfx</AssemblyOriginatorKeyFile>
     <AssemblyVersion>2.1.9.0</AssemblyVersion>
     <FileVersion>2.1.9.0</FileVersion>
     <Copyright>Copyright © MihailsKuzmins 2020</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
