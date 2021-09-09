@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
+    <TargetFrameworks>net40;net45;netcoreapp3.0</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <Version>2.1.9</Version>
+    <Version>2.2.0</Version>
     <Authors>Mihails Kuzmins</Authors>
     <SignAssembly>true</SignAssembly>
     <LangVersion>preview</LangVersion>
     <Nullable>Enable</Nullable>
-    <AssemblyOriginatorKeyFile>layout.extensions.wpf.pfx</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>2.1.9.0</AssemblyVersion>
-    <FileVersion>2.1.9.0</FileVersion>
-    <Copyright>Copyright © MihailsKuzmins 2020</Copyright>
+    <AssemblyOriginatorKeyFile>dev.pfx</AssemblyOriginatorKeyFile>
+    <Copyright>Copyright © MihailsKuzmins 2021</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>LayoutEx.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="lib\**" />
-    <EmbeddedResource Remove="lib\**" />
-    <None Remove="lib\**" />
-    <Page Remove="lib\**" />
+    <None Include="..\..\LayoutEx.png">
+      <Pack>True</Pack>
+      <PackagePath />
+    </None>
   </ItemGroup>
 
 </Project>
