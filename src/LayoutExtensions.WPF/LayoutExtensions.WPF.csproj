@@ -11,6 +11,15 @@
     <AssemblyOriginatorKeyFile>dev.pfx</AssemblyOriginatorKeyFile>
     <Copyright>Copyright © MihailsKuzmins 2021</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>LayoutEx.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LayoutEx.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
